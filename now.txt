@@ -1,0 +1,367 @@
+
+
+L2 — CORE DOMAIN MASTER ENTITIES
+
+--------------------------------
+
+
+
+2.10 Tenant
+
+Fields:
+
+- tenantId
+
+- tenantCode
+
+- tenantName
+
+- status
+
+- createdAt
+
+- updatedAt
+
+DB:
+
+- tenants
+
+
+
+2.11 Institution
+
+Fields:
+
+- institutionId
+
+- tenantId
+
+- institutionCode
+
+- institutionName
+
+- institutionType
+
+- region
+
+- city
+
+- status
+
+- createdAt
+
+- updatedAt
+
+DB:
+
+- institutions
+
+
+
+2.12 OrgUnit
+
+Fields:
+
+- orgUnitId
+
+- institutionId
+
+- parentOrgUnitId
+
+- orgUnitCode
+
+- orgUnitName
+
+- orgUnitType
+
+- status
+
+- createdAt
+
+- updatedAt
+
+DB:
+
+- org_units
+
+
+
+2.13 Campus
+
+Fields:
+
+- campusId
+
+- institutionId
+
+- campusCode
+
+- campusName
+
+- address
+
+- status
+
+- createdAt
+
+- updatedAt
+
+DB:
+
+- campuses
+
+
+
+2.14 Location
+
+Fields:
+
+- locationId
+
+- campusId
+
+- locationCode
+
+- locationName
+
+- locationType
+
+- capacity
+
+- status
+
+- createdAt
+
+- updatedAt
+
+DB:
+
+- locations
+
+
+
+2.15 Period
+
+Fields:
+
+- periodId
+
+- tenantId
+
+- periodCode
+
+- periodType
+
+- academicYear
+
+- startDate
+
+- endDate
+
+- isClosed
+
+- createdAt
+
+- updatedAt
+
+DB:
+
+- periods
+
+
+
+2.16 Student
+
+Fields:
+
+- studentId
+
+- institutionId
+
+- orgUnitId
+
+- currentProgramId
+
+- studentCode
+
+- nationalIdMasked
+
+- firstName
+
+- lastName
+
+- birthDate
+
+- gender
+
+- admissionDate
+
+- graduationDate
+
+- enrollmentStatus
+
+- createdAt
+
+- updatedAt
+
+DB:
+
+- students
+
+
+
+2.17 Teacher
+
+Fields:
+
+- teacherId
+
+- institutionId
+
+- orgUnitId
+
+- teacherCode
+
+- firstName
+
+- lastName
+
+- gradeOrRank
+
+- specialization
+
+- hireDate
+
+- contractType
+
+- employmentStatus
+
+- createdAt
+
+- updatedAt
+
+DB:
+
+- teachers
+
+
+
+2.18 StaffMember
+
+Fields:
+
+- staffId
+
+- institutionId
+
+- orgUnitId
+
+- staffCode
+
+- firstName
+
+- lastName
+
+- staffType
+
+- hireDate
+
+- contractType
+
+- employmentStatus
+
+- createdAt
+
+- updatedAt
+
+DB:
+
+- staff_members
+
+
+
+2.19 Program
+
+Fields:
+
+- programId
+
+- institutionId
+
+- orgUnitId
+
+- programCode
+
+- programName
+
+- degreeLevel
+
+- durationYears
+
+- status
+
+- createdAt
+
+- updatedAt
+
+DB:
+
+- programs
+
+
+
+2.20 Course
+
+Fields:
+
+- courseId
+
+- programId
+
+- courseCode
+
+- courseName
+
+- courseType
+
+- creditValue
+
+- status
+
+- createdAt
+
+- updatedAt
+
+DB:
+
+- courses
+
+
+
+2.21 CourseOffering
+
+Fields:
+
+- courseOfferingId
+
+- courseId
+
+- institutionId
+
+- orgUnitId
+
+- periodId
+
+- sectionCode
+
+- deliveryMode
+
+- status
+
+- createdAt
+
+- updatedAt
+
+DB:
+
+- course_offerings

@@ -1,0 +1,47 @@
+{
+  "document_id": "6074b319",
+  "document_type": "statistiques",
+  "institution_id": "enstab",
+  "period_id": "2025-S1",
+  "source_file": "stats_2025_s1.xlsx",
+  "extracted_at": "2026-04-25T19:19:28.870558+00:00",
+  "data": {
+    "titre": "Statistiques Détaillées - Semestre S1 2025",
+    "date": "2025-04-25",
+    "donnees": [
+      {
+        "filiere": "Informatique",
+        "total": 180,
+        "reussis": 162,
+        "taux": "90%"
+      },
+      {
+        "filiere": "Electrotechnique",
+        "total": 150,
+        "reussis": 125,
+        "taux": "83%"
+      },
+      {
+        "filiere": "Mécanique",
+        "total": 120,
+        "reussis": 105,
+        "taux": "87%"
+      },
+      {
+        "filiere": "Génie Civil",
+        "total": 92,
+        "reussis": 79,
+        "taux": "86%"
+      }
+    ],
+    "totaux": {
+      "total_general": 542,
+      "reussis_total": 471,
+      "taux_general": "87%"
+    },
+    "sources": [
+      "Données du registre académique",
+      "Export base de données"
+    ]
+  }
+}

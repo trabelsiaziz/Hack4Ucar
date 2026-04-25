@@ -1,0 +1,291 @@
+{
+  "source": "bulletin_etudiant",
+  "student": {
+    "nom": "JABER",
+    "prenom": "EYA",
+    "cin": "14516283",
+    "numero_etudiant": "0640123"
+  },
+  "inscription": {
+    "institution": "UNIVERSITE DE CARTHAGE",
+    "filiere": "Diplôme National d'Ingénieur",
+    "specialite": "Electronique Avancée et Nanotechnologies",
+    "niveau": "DEUXIEME ANNEE",
+    "annee_universitaire": "2024/2025"
+  },
+  "bilan": {
+    "moyenne_generale": 12.3,
+    "mention": "ASSEZ BIEN",
+    "resultat": "ADMIS",
+    "decision_jury": "ADMIS avec la Mention ASSEZ BIEN"
+  },
+  "kpi_observations": [
+    {
+      "observation_id": "obs-93043d9e",
+      "kpi_id": "kpi-acad-001",
+      "kpi_code": "SUCCESS_RATE",
+      "name": "Taux de réussite (étudiant)",
+      "context": {
+        "tenant_id": "ucar",
+        "institution_id": "universite_de_carthage",
+        "domain": "academic",
+        "period_id": "2024/2025",
+        "student_id": "0640123",
+        "student_name": "EYA JABER"
+      },
+      "scope_type": "student",
+      "computed_value": 61.5,
+      "unit": "percent",
+      "computed_at": "2026-04-25T17:55:03.951361+00:00"
+    },
+    {
+      "observation_id": "obs-c732b9e9",
+      "kpi_id": "kpi-acad-006",
+      "kpi_code": "EXAM_RESULTS",
+      "name": "Moyenne générale",
+      "context": {
+        "tenant_id": "ucar",
+        "institution_id": "universite_de_carthage",
+        "domain": "academic",
+        "period_id": "2024/2025",
+        "student_id": "0640123",
+        "student_name": "EYA JABER"
+      },
+      "scope_type": "student",
+      "computed_value": 12.3,
+      "unit": "score_20",
+      "computed_at": "2026-04-25T17:55:03.951471+00:00"
+    },
+    {
+      "observation_id": "obs-8fef96cf",
+      "kpi_id": "kpi-acad-003",
+      "kpi_code": "GRADE_REPETITION_RATE",
+      "name": "Taux matières ajournées",
+      "context": {
+        "tenant_id": "ucar",
+        "institution_id": "universite_de_carthage",
+        "domain": "academic",
+        "period_id": "2024/2025",
+        "student_id": "0640123",
+        "student_name": "EYA JABER"
+      },
+      "scope_type": "student",
+      "computed_value": 20.0,
+      "unit": "percent",
+      "computed_at": "2026-04-25T17:55:03.951526+00:00"
+    },
+    {
+      "observation_id": "obs-7132b47b",
+      "kpi_id": "kpi-acad-005",
+      "kpi_code": "PEDAGOGICAL_PROGRESSION",
+      "name": "Progression pédagogique",
+      "context": {
+        "tenant_id": "ucar",
+        "institution_id": "universite_de_carthage",
+        "domain": "academic",
+        "period_id": "2024/2025",
+        "student_id": "0640123",
+        "student_name": "EYA JABER"
+      },
+      "scope_type": "student",
+      "computed_value": 1,
+      "unit": "boolean",
+      "computed_at": "2026-04-25T17:55:03.951562+00:00"
+    },
+    {
+      "observation_id": "obs-3ea30bc3",
+      "kpi_id": "kpi-acad-006",
+      "kpi_code": "EXAM_RESULTS",
+      "name": "Résultat — Résistance des matériaux",
+      "context": {
+        "tenant_id": "ucar",
+        "institution_id": "universite_de_carthage",
+        "domain": "academic",
+        "period_id": "2024/2025",
+        "student_id": "0640123",
+        "matiere": "Résistance des matériaux"
+      },
+      "scope_type": "subject",
+      "computed_value": 6.82,
+      "unit": "score_20",
+      "resultat": "Ajourné",
+      "computed_at": "2026-04-25T17:55:03.951602+00:00"
+    },
+    {
+      "observation_id": "obs-8332d770",
+      "kpi_id": "kpi-acad-006",
+      "kpi_code": "EXAM_RESULTS",
+      "name": "Résultat — Physique des Matériaux",
+      "context": {
+        "tenant_id": "ucar",
+        "institution_id": "universite_de_carthage",
+        "domain": "academic",
+        "period_id": "2024/2025",
+        "student_id": "0640123",
+        "matiere": "Physique des Matériaux"
+      },
+      "scope_type": "subject",
+      "computed_value": 7.81,
+      "unit": "score_20",
+      "resultat": "Ajourné",
+      "computed_at": "2026-04-25T17:55:03.951627+00:00"
+    },
+    {
+      "observation_id": "obs-a887aef1",
+      "kpi_id": "kpi-acad-006",
+      "kpi_code": "EXAM_RESULTS",
+      "name": "Résultat — Recherche Opérationnelle",
+      "context": {
+        "tenant_id": "ucar",
+        "institution_id": "universite_de_carthage",
+        "domain": "academic",
+        "period_id": "2024/2025",
+        "student_id": "0640123",
+        "matiere": "Recherche Opérationnelle"
+      },
+      "scope_type": "subject",
+      "computed_value": 11.3,
+      "unit": "score_20",
+      "resultat": "Admis",
+      "computed_at": "2026-04-25T17:55:03.951643+00:00"
+    },
+    {
+      "observation_id": "obs-e8d38b02",
+      "kpi_id": "kpi-acad-006",
+      "kpi_code": "EXAM_RESULTS",
+      "name": "Résultat — Processus Stochastiques",
+      "context": {
+        "tenant_id": "ucar",
+        "institution_id": "universite_de_carthage",
+        "domain": "academic",
+        "period_id": "2024/2025",
+        "student_id": "0640123",
+        "matiere": "Processus Stochastiques"
+      },
+      "scope_type": "subject",
+      "computed_value": 10.5,
+      "unit": "score_20",
+      "resultat": "Admis",
+      "computed_at": "2026-04-25T17:55:03.951658+00:00"
+    },
+    {
+      "observation_id": "obs-dd45da54",
+      "kpi_id": "kpi-acad-006",
+      "kpi_code": "EXAM_RESULTS",
+      "name": "Résultat — Intelligence Artificielle",
+      "context": {
+        "tenant_id": "ucar",
+        "institution_id": "universite_de_carthage",
+        "domain": "academic",
+        "period_id": "2024/2025",
+        "student_id": "0640123",
+        "matiere": "Intelligence Artificielle"
+      },
+      "scope_type": "subject",
+      "computed_value": 12.5,
+      "unit": "score_20",
+      "resultat": "Admis",
+      "computed_at": "2026-04-25T17:55:03.951670+00:00"
+    },
+    {
+      "observation_id": "obs-11ffb60c",
+      "kpi_id": "kpi-acad-006",
+      "kpi_code": "EXAM_RESULTS",
+      "name": "Résultat — Techniques traitement images",
+      "context": {
+        "tenant_id": "ucar",
+        "institution_id": "universite_de_carthage",
+        "domain": "academic",
+        "period_id": "2024/2025",
+        "student_id": "0640123",
+        "matiere": "Techniques traitement images"
+      },
+      "scope_type": "subject",
+      "computed_value": 16.63,
+      "unit": "score_20",
+      "resultat": "Admis",
+      "computed_at": "2026-04-25T17:55:03.951685+00:00"
+    },
+    {
+      "observation_id": "obs-437d90b6",
+      "kpi_id": "kpi-acad-006",
+      "kpi_code": "EXAM_RESULTS",
+      "name": "Résultat — Anglais 3",
+      "context": {
+        "tenant_id": "ucar",
+        "institution_id": "universite_de_carthage",
+        "domain": "academic",
+        "period_id": "2024/2025",
+        "student_id": "0640123",
+        "matiere": "Anglais 3"
+      },
+      "scope_type": "subject",
+      "computed_value": 15.25,
+      "unit": "score_20",
+      "resultat": "Admis",
+      "computed_at": "2026-04-25T17:55:03.951697+00:00"
+    },
+    {
+      "observation_id": "obs-5ab6f760",
+      "kpi_id": "kpi-acad-006",
+      "kpi_code": "EXAM_RESULTS",
+      "name": "Résultat — Anglais 4",
+      "context": {
+        "tenant_id": "ucar",
+        "institution_id": "universite_de_carthage",
+        "domain": "academic",
+        "period_id": "2024/2025",
+        "student_id": "0640123",
+        "matiere": "Anglais 4"
+      },
+      "scope_type": "subject",
+      "computed_value": 13.38,
+      "unit": "score_20",
+      "resultat": "Admis",
+      "computed_at": "2026-04-25T17:55:03.951709+00:00"
+    },
+    {
+      "observation_id": "obs-d50b99f2",
+      "kpi_id": "kpi-acad-006",
+      "kpi_code": "EXAM_RESULTS",
+      "name": "Résultat — Langue ALI/JAP",
+      "context": {
+        "tenant_id": "ucar",
+        "institution_id": "universite_de_carthage",
+        "domain": "academic",
+        "period_id": "2024/2025",
+        "student_id": "0640123",
+        "matiere": "Langue ALI/JAP"
+      },
+      "scope_type": "subject",
+      "computed_value": 19.25,
+      "unit": "score_20",
+      "resultat": "Admis",
+      "computed_at": "2026-04-25T17:55:03.951722+00:00"
+    },
+    {
+      "observation_id": "obs-732ce49d",
+      "kpi_id": "kpi-acad-006",
+      "kpi_code": "EXAM_RESULTS",
+      "name": "Résultat — Projet de synthèse 2",
+      "context": {
+        "tenant_id": "ucar",
+        "institution_id": "universite_de_carthage",
+        "domain": "academic",
+        "period_id": "2024/2025",
+        "student_id": "0640123",
+        "matiere": "Projet de synthèse 2"
+      },
+      "scope_type": "subject",
+      "computed_value": 18.0,
+      "unit": "score_20",
+      "resultat": "Admis",
+      "computed_at": "2026-04-25T17:55:03.951735+00:00"
+    }
+  ],
+  "alerts": [],
+  "meta": {
+    "document_type": "bulletin_etudiant",
+    "extraction_model": "gpt-4o"
+  }
+}
