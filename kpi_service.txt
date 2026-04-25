@@ -1,0 +1,1356 @@
+Description
+
+
+KPI DASHBOARD PLAN — V1
+
+=======================
+
+ 
+
+Purpose
+
+-------
+
+This document defines the V1 KPI and dashboard plan for the reduced UCAR architecture.
+
+It contains:
+
+1. KPI list
+
+2. KPI formulas
+
+3. Source tables
+
+4. Dashboard charts/widgets
+
+5. Backend JSON response shapes
+
+6. Next development steps
+
+ 
+
+Design Scope
+
+------------
+
+This V1 focuses only on the necessary KPI domains already aligned with the reduced backend architecture:
+
+- Academic
+
+- Finance
+
+- HR
+
+ 
+
+The goal is to:
+
+- compute a small but relevant KPI set,
+
+- expose chart-ready backend responses,
+
+- provide the frontend with dynamic widgets,
+
+- prepare the AI core and LangGraph agent to reason on top of KPI observations, alerts, insights, and recommendations.
+
+ 
+
+ 
+
+1) KPI LIST (V1)
+
+================
+
+ 
+
+A. Academic KPIs
+
+----------------
+
+1. SUCCESS_RATE
+
+2. ATTENDANCE_RATE
+
+3. DROPOUT_RATE
+
+4. EXAM_RESULTS_AVG
+
+ 
+
+B. Finance KPIs
+
+---------------
+
+5. ALLOCATED_BUDGET
+
+6. CONSUMED_BUDGET
+
+7. BUDGET_EXECUTION_RATE
+
+8. COST_PER_STUDENT
+
+ 
+
+C. HR KPIs
+
+----------
+
+9. TEACHING_HEADCOUNT
+
+10. ADMINISTRATIVE_HEADCOUNT
+
+11. ABSENTEEISM_RATE
+
+12. TEACHING_LOAD
+
+ 
+
+ 
+
+2) KPI FORMULAS
+
+===============
+
+ 
+
+A. Academic KPIs
+
+----------------
+
+ 
+
+1. SUCCESS_RATE
+
+Definition:
+
+Percentage of students who passed in a given scope and period.
+
+Formula:
+
+SUCCESS_RATE = (number_of_students_passed / number_of_students_assessed) * 100
+
+Numerator source:
+
+- assessment_results where passed = true
+
+Denominator source:
+
+- assessment_results
+
+Unit:
+
+- percent
+
+Typical scope:
+
+- institution / org_unit / program / period
+
+ 
+
+2. ATTENDANCE_RATE
+
+Definition:
+
+Average attendance rate for a student population in a given scope and period.
+
+Formula:
+
+ATTENDANCE_RATE = average(attendance_rate)
+
+Source:
+
+- attendance_records
+
+Unit:
+
+- percent
+
+Typical scope:
+
+- institution / org_unit / course_offering / period
+
+ 
+
+3. DROPOUT_RATE
+
+Definition:
+
+Percentage of enrolled students marked as dropped out in a given period.
+
+Formula:
+
+DROPOUT_RATE = (number_of_dropout_students / total_enrolled_students) * 100
+
+Numerator source:
+
+- students or enrollments where enrollment_status = 'dropped' (depending on business rule)
+
+Denominator source:
+
+- enrollments
+
+Unit:
+
+- percent
+
+Typical scope:
+
+- institution / program / period
+
+ 
+
+4. EXAM_RESULTS_AVG
+
+Definition:
+
+Average exam/assessment score in a given scope and period.
+
+Formula:
+
+EXAM_RESULTS_AVG = average(score)
+
+Source:
+
+- assessment_results
+
+Unit:
+
+- score
+
+Typical scope:
+
+- institution / course_offering / program / period
+
+ 
+
+ 
+
+B. Finance KPIs
+
+---------------
+
+ 
+
+5. ALLOCATED_BUDGET
+
+Definition:
+
+Total allocated budget for a given scope and period.
+
+Formula:
+
+ALLOCATED_BUDGET = sum(amount where budget_type = 'allocated')
+
+Source:
+
+- budget_facts
+
+Unit:
+
+- currency
+
+Typical scope:
+
+- institution / org_unit / period
+
+ 
+
+6. CONSUMED_BUDGET
+
+Definition:
+
+Total consumed budget for a given scope and period.
+
+Formula:
+
+CONSUMED_BUDGET = sum(amount where budget_type = 'consumed')
+
+Source:
+
+- budget_facts
+
+Unit:
+
+- currency
+
+Typical scope:
+
+- institution / org_unit / period
+
+ 
+
+7. BUDGET_EXECUTION_RATE
+
+Definition:
+
+Percentage of allocated budget that has already been consumed.
+
+Formula:
+
+BUDGET_EXECUTION_RATE = (CONSUMED_BUDGET / ALLOCATED_BUDGET) * 100
+
+Sources:
+
+- budget_facts
+
+Unit:
+
+- percent
+
+Typical scope:
+
+- institution / org_unit / period
+
+Note:
+
+- if ALLOCATED_BUDGET = 0, return null or 0 according to business policy
+
+ 
+
+8. COST_PER_STUDENT
+
+Definition:
+
+Average budget cost per enrolled student.
+
+Formula:
+
+COST_PER_STUDENT = CONSUMED_BUDGET / total_enrolled_students
+
+Numerator source:
+
+- budget_facts where budget_type = 'consumed'
+
+Denominator source:
+
+- enrollments
+
+Unit:
+
+- currency per student
+
+Typical scope:
+
+- institution / period
+
+Note:
+
+- if total_enrolled_students = 0, return null or 0 according to business policy
+
+ 
+
+ 
+
+C. HR KPIs
+
+----------
+
+ 
+
+9. TEACHING_HEADCOUNT
+
+Definition:
+
+Number of active teachers in a given scope.
+
+Formula:
+
+TEACHING_HEADCOUNT = count(teachers where employment_status = 'active')
+
+Source:
+
+- teachers
+
+Unit:
+
+- count
+
+Typical scope:
+
+- institution / org_unit / period snapshot
+
+ 
+
+10. ADMINISTRATIVE_HEADCOUNT
+
+Definition:
+
+Number of active administrative/support staff in a given scope.
+
+Formula:
+
+ADMINISTRATIVE_HEADCOUNT = count(staff_members where employment_status = 'active')
+
+Source:
+
+- staff_members
+
+Unit:
+
+- count
+
+Typical scope:
+
+- institution / org_unit / period snapshot
+
+ 
+
+11. ABSENTEEISM_RATE
+
+Definition:
+
+Average absenteeism rate for staff or teacher groups.
+
+Formula option A (using hr_facts):
+
+ABSENTEEISM_RATE = average(value where hr_metric = 'absenteeism_rate')
+
+Formula option B (using attendance_records):
+
+ABSENTEEISM_RATE = (number_of_absences / total_expected_attendance_events) * 100
+
+Primary V1 source:
+
+- hr_facts
+
+Optional supporting source:
+
+- attendance_records
+
+Unit:
+
+- percent
+
+Typical scope:
+
+- institution / org_unit / period
+
+ 
+
+12. TEACHING_LOAD
+
+Definition:
+
+Total teaching hours assigned to teachers.
+
+Formula:
+
+TEACHING_LOAD = sum(hours_assigned)
+
+Source:
+
+- teaching_assignments
+
+Unit:
+
+- hours
+
+Typical scope:
+
+- institution / org_unit / teacher / period
+
+ 
+
+ 
+
+3) SOURCE TABLES USED BY KPI DOMAIN
+
+===================================
+
+ 
+
+A. Academic KPI sources
+
+-----------------------
+
+Main tables:
+
+- students
+
+- programs
+
+- course_offerings
+
+- enrollments
+
+- attendance_records
+
+- assessment_results
+
+ 
+
+Used for:
+
+- SUCCESS_RATE
+
+- ATTENDANCE_RATE
+
+- DROPOUT_RATE
+
+- EXAM_RESULTS_AVG
+
+ 
+
+B. Finance KPI sources
+
+----------------------
+
+Main tables:
+
+- budget_facts
+
+- enrollments
+
+ 
+
+Used for:
+
+- ALLOCATED_BUDGET
+
+- CONSUMED_BUDGET
+
+- BUDGET_EXECUTION_RATE
+
+- COST_PER_STUDENT
+
+ 
+
+C. HR KPI sources
+
+-----------------
+
+Main tables:
+
+- teachers
+
+- staff_members
+
+- hr_facts
+
+- teaching_assignments
+
+- attendance_records (optional support)
+
+ 
+
+Used for:
+
+- TEACHING_HEADCOUNT
+
+- ADMINISTRATIVE_HEADCOUNT
+
+- ABSENTEEISM_RATE
+
+- TEACHING_LOAD
+
+ 
+
+D. KPI persistence/governance tables
+
+------------------------------------
+
+These are not raw sources, but they are required for KPI computation and monitoring:
+
+- kpi_definitions
+
+- kpi_formula_versions
+
+- kpi_thresholds
+
+- kpi_observations
+
+- alerts
+
+- anomalies
+
+- insights
+
+- recommendations
+
+ 
+
+ 
+
+4) DASHBOARD CHARTS / WIDGETS (V1)
+
+==================================
+
+ 
+
+Dashboard goal:
+
+Provide a decision-support dashboard with clear, visually appealing, and useful widgets.
+
+The dashboard should not show random charts.
+
+It should show:
+
+- main KPI cards,
+
+- trends over time,
+
+- comparison across institutions,
+
+- budget and HR status,
+
+- alerts and AI insights.
+
+ 
+
+A. Top KPI cards
+
+----------------
+
+Widget type:
+
+- stat-card
+
+Recommended cards:
+
+1. Success Rate
+
+2. Budget Execution Rate
+
+3. Absenteeism Rate
+
+4. Cost per Student
+
+5. Open Alerts Count
+
+6. Recommendations Count
+
+Why:
+
+- immediate executive overview
+
+ 
+
+B. Trend charts
+
+---------------
+
+Widget type:
+
+- line-chart
+
+Recommended charts:
+
+1. Success Rate Trend by Period
+
+2. Attendance Rate Trend by Period
+
+3. Budget Execution Trend by Period
+
+4. Absenteeism Rate Trend by Period
+
+Why:
+
+- trend analysis is essential for decision support
+
+ 
+
+C. Multi-institution comparison charts
+
+--------------------------------------
+
+Widget type:
+
+- bar-chart / horizontal-bar-chart
+
+Recommended charts:
+
+1. Success Rate by Institution
+
+2. Budget Execution Rate by Institution
+
+3. Absenteeism Rate by Institution
+
+4. Cost per Student by Institution
+
+Why:
+
+- the problem statement emphasizes multi-institution comparison
+
+ 
+
+D. Finance breakdown charts
+
+---------------------------
+
+Widget type:
+
+- stacked-bar-chart / bar-chart / donut-chart
+
+Recommended charts:
+
+1. Allocated vs Consumed Budget by Institution
+
+2. Spending by Department / Org Unit
+
+Why:
+
+- shows resource allocation and consumption clearly
+
+ 
+
+E. HR charts
+
+------------
+
+Widget type:
+
+- bar-chart / stacked-bar-chart
+
+Recommended charts:
+
+1. Teaching vs Administrative Headcount
+
+2. Teaching Load by Department or Teacher Group
+
+Why:
+
+- useful for HR capacity planning and monitoring
+
+ 
+
+F. Monitoring widgets
+
+---------------------
+
+Widget type:
+
+- alert-list
+
+- anomaly-list
+
+Recommended widgets:
+
+1. Open Alerts by Severity
+
+2. Latest Alerts List
+
+3. Latest Anomalies List
+
+Why:
+
+- highlights operational risk and threshold breaches
+
+ 
+
+G. AI widgets
+
+-------------
+
+Widget type:
+
+- insight-card
+
+- recommendation-list
+
+Recommended widgets:
+
+1. Executive Summary Insight
+
+2. Top Recommendations
+
+Why:
+
+- turns KPI outputs into decision support
+
+ 
+
+ 
+
+5) BACKEND JSON RESPONSES FOR FRONTEND
+
+======================================
+
+ 
+
+Important rule:
+
+The frontend should receive chart-ready or widget-ready data.
+
+The frontend should NOT calculate KPI logic.
+
+The backend should compute KPI observations and return display-ready objects.
+
+ 
+
+A. KPI stat card response
+
+-------------------------
+
+{
+
+  "widgetType": "stat-card",
+
+  "title": "Success Rate",
+
+  "value": 78.5,
+
+  "unit": "%",
+
+  "trend": "up",
+
+  "delta": 3.2,
+
+  "periodId": "2025-S1",
+
+  "scope": {
+
+    "scopeType": "institution",
+
+    "scopeId": "enit"
+
+  }
+
+}
+
+ 
+
+B. Time-series chart response
+
+-----------------------------
+
+{
+
+  "widgetType": "chart",
+
+  "chartType": "line",
+
+  "title": "Success Rate Trend",
+
+  "xAxis": ["2025-S1", "2025-S2", "2026-S1"],
+
+  "series": [
+
+    {
+
+      "key": "successRate",
+
+      "label": "Success Rate",
+
+      "data": [72.1, 75.3, 78.5],
+
+      "unit": "%"
+
+    }
+
+  ]
+
+}
+
+ 
+
+C. Institution comparison chart response
+
+----------------------------------------
+
+{
+
+  "widgetType": "chart",
+
+  "chartType": "bar",
+
+  "title": "Budget Execution Rate by Institution",
+
+  "categories": ["ENIT", "FSEG", "IHEC"],
+
+  "series": [
+
+    {
+
+      "key": "budgetExecutionRate",
+
+      "label": "Budget Execution Rate",
+
+      "data": [81, 67, 74],
+
+      "unit": "%"
+
+    }
+
+  ]
+
+}
+
+ 
+
+D. Finance stacked chart response
+
+---------------------------------
+
+{
+
+  "widgetType": "chart",
+
+  "chartType": "stacked-bar",
+
+  "title": "Allocated vs Consumed Budget",
+
+  "categories": ["ENIT", "FSEG", "IHEC"],
+
+  "series": [
+
+    {
+
+      "key": "allocatedBudget",
+
+      "label": "Allocated",
+
+      "data": [400000, 350000, 300000],
+
+      "unit": "TND"
+
+    },
+
+    {
+
+      "key": "consumedBudget",
+
+      "label": "Consumed",
+
+      "data": [320000, 240000, 215000],
+
+      "unit": "TND"
+
+    }
+
+  ]
+
+}
+
+ 
+
+E. Alert list response
+
+----------------------
+
+{
+
+  "widgetType": "alert-list",
+
+  "title": "Open Alerts",
+
+  "items": [
+
+    {
+
+      "alertId": "alt-001",
+
+      "severity": "high",
+
+      "message": "Absenteeism rate exceeded threshold",
+
+      "institution": "IHEC",
+
+      "periodId": "2025-03",
+
+      "status": "open"
+
+    }
+
+  ]
+
+}
+
+ 
+
+F. Recommendation list response
+
+-------------------------------
+
+{
+
+  "widgetType": "recommendation-list",
+
+  "title": "Recommendations",
+
+  "items": [
+
+    {
+
+      "recommendationId": "rec-001",
+
+      "priority": "high",
+
+      "title": "Review attendance management",
+
+      "description": "Absenteeism is above threshold this month.",
+
+      "status": "proposed"
+
+    }
+
+  ]
+
+}
+
+ 
+
+G. Insight card response
+
+------------------------
+
+{
+
+  "widgetType": "insight-card",
+
+  "title": "Executive Summary",
+
+  "summaryText": "Success rate improved while absenteeism remains elevated in one institution.",
+
+  "confidenceScore": 0.87
+
+}
+
+ 
+
+ 
+
+6) RECOMMENDED BACKEND ENDPOINTS (V1)
+
+=====================================
+
+ 
+
+1. GET /api/dashboard/overview
+
+Returns:
+
+- top KPI cards
+
+- open alert count
+
+- recommendation count
+
+ 
+
+2. GET /api/dashboard/trends
+
+Returns:
+
+- line chart data for selected KPI over periods
+
+ 
+
+3. GET /api/dashboard/comparison
+
+Returns:
+
+- institution comparison charts for selected KPI
+
+ 
+
+4. GET /api/dashboard/finance
+
+Returns:
+
+- allocated vs consumed budget charts
+
+- spending by department charts
+
+ 
+
+5. GET /api/dashboard/hr
+
+Returns:
+
+- headcount charts
+
+- teaching load charts
+
+- absenteeism chart
+
+ 
+
+6. GET /api/dashboard/alerts
+
+Returns:
+
+- alert list
+
+- alert summary by severity
+
+ 
+
+7. GET /api/dashboard/insights
+
+Returns:
+
+- executive summary insight
+
+- top recommendations
+
+ 
+
+ 
+
+7) HOW THE BACKEND SHOULD WORK
+
+==============================
+
+ 
+
+Step 1 — read source/domain data
+
+--------------------------------
+
+Read from source fact tables:
+
+- enrollments
+
+- attendance_records
+
+- assessment_results
+
+- budget_facts
+
+- teachers
+
+- staff_members
+
+- hr_facts
+
+- teaching_assignments
+
+ 
+
+Step 2 — normalize if needed
+
+----------------------------
+
+If required by the pipeline, normalize facts into:
+
+- business_records
+
+- business_record_values
+
+ 
+
+Step 3 — compute KPI observations
+
+---------------------------------
+
+For each KPI definition and target scope:
+
+- compute value
+
+- apply formula version
+
+- store result into kpi_observations
+
+ 
+
+Step 4 — evaluate thresholds
+
+----------------------------
+
+Using kpi_thresholds:
+
+- generate alerts when thresholds are exceeded
+
+ 
+
+Step 5 — detect anomalies
+
+-------------------------
+
+Using rules/statistical checks:
+
+- generate anomalies when unusual patterns are found
+
+ 
+
+Step 6 — generate AI outputs
+
+----------------------------
+
+Generate:
+
+- insights
+
+- recommendations
+
+- decision explanations
+
+based on KPI observations, alerts, and anomalies
+
+ 
+
+Step 7 — expose frontend-ready widgets
+
+--------------------------------------
+
+Backend transforms analytical results into:
+
+- stat-card responses
+
+- chart responses
+
+- alert-list responses
+
+- recommendation-list responses
+
+- insight-card responses
+
+ 
+
+ 
+
+8) NEXT DEVELOPMENT STEPS
+
+=========================
+
+ 
+
+Phase 1 — freeze V1 KPI scope
+
+-----------------------------
+
+Freeze these 12 KPIs only:
+
+- SUCCESS_RATE
+
+- ATTENDANCE_RATE
+
+- DROPOUT_RATE
+
+- EXAM_RESULTS_AVG
+
+- ALLOCATED_BUDGET
+
+- CONSUMED_BUDGET
+
+- BUDGET_EXECUTION_RATE
+
+- COST_PER_STUDENT
+
+- TEACHING_HEADCOUNT
+
+- ADMINISTRATIVE_HEADCOUNT
+
+- ABSENTEEISM_RATE
+
+- TEACHING_LOAD
+
+ 
+
+Phase 2 — implement KPI governance seed data
+
+--------------------------------------------
+
+Create seed data for:
+
+- kpi_definitions
+
+- kpi_formula_versions
+
+- kpi_thresholds
+
+ 
+
+Phase 3 — implement KPI engine services
+
+---------------------------------------
+
+Build backend services that:
+
+- fetch source/domain data,
+
+- compute KPI observations,
+
+- persist kpi_observations,
+
+- generate alerts,
+
+- optionally generate anomalies
+
+ 
+
+Phase 4 — implement dashboard APIs
+
+----------------------------------
+
+Build backend endpoints returning:
+
+- stat-card responses
+
+- chart responses
+
+- alert-list responses
+
+- recommendation-list responses
+
+- insight-card responses
+
+ 
+
+Phase 5 — implement frontend widget rendering
+
+---------------------------------------------
+
+Connect the dynamic frontend widgets to those APIs.
+
+ 
+
+Phase 6 — implement AI core / LangGraph
+
+---------------------------------------
+
+Once KPI observations and alerts are stable, build the AI core that:
+
+- answers KPI questions,
+
+- explains alerts,
+
+- compares institutions,
+
+- summarizes dashboard state,
+
+- produces recommendations
+
+ 
+
+Phase 7 — add explainability and traces
+
+---------------------------------------
+
+Ensure the AI core references:
+
+- KPI observation IDs
+
+- alert IDs
+
+- anomaly IDs
+
+- recommendation IDs
+
+- decision explanations
+
+ 
+
+ 
+
+9) FINAL SIMPLIFIED RULE
+
+========================
+
+ 
+
+- Raw/domain tables store facts.
+
+- KPI engine computes KPI observations.
+
+- Alerts and anomalies are monitoring outputs.
+
+- Insights and recommendations are AI outputs.
+
+- Frontend displays backend-prepared widget data.
+
+- LangGraph should reason on top of KPI observations, alerts, anomalies, insights, and recommendations — not directly on raw tables whenever avoidable.
+
+ 
+
+End of file.
