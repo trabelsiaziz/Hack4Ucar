@@ -1,0 +1,1820 @@
+
+
+NEW REDUCED ARCHITECTURE — KEEP FULL MUST-HAVE FIELDS, REDUCE ENTITIES ONLY
+
+=============================================================================
+
+ 
+
+Goal
+
+----
+
+This version is intentionally REDUCED at the ENTITY level, not at the FIELD level.
+
+The idea is:
+
+- keep only the necessary entities/components;
+
+- keep all must-have fields for each kept object;
+
+- keep the DB links explicit and clean;
+
+- keep the Java backend architecture simple and maintainable.
+
+ 
+
+Reduction rule applied
+
+----------------------
+
+Removed optional / non-essential entities to keep the architecture focused:
+
+- Campus
+
+- Location
+
+- RawDocumentPageRecord
+
+- RawSheetRecord
+
+- RawTabularRowRecord
+
+- ResearchFact
+
+- PartnershipFact
+
+- InfrastructureFact
+
+- EsgFact
+
+- KpiSourceMapping
+
+- KpiObservationComponent
+
+- AlertEvent
+
+- AnomalyEvidence
+
+- RecommendationLink
+
+ 
+
+Kept only the necessary entities for:
+
+- ingestion / provenance
+
+- organization and users
+
+- academic / finance / HR facts
+
+- canonical cross-service exchange
+
+- KPI engine
+
+- AI analysis / recommendation
+
+- audit / orchestration
+
+ 
+
+ 
+
+FINAL LAYERING ORDER
+
+--------------------
+
+
+L2. Access + core domain master entities
+
+L3. Domain fact entities
+
+L4. Canonical cross-service entity
+
+L5. KPI governance entities
+
+L6. KPI result / monitoring entities
+
+L7. AI analysis entities
+
+
+ 
+
+ 
+
+L2 — ACCESS + CORE DOMAIN MASTER ENTITIES
+
+=========================================
+
+ 
+
+7) Tenant
+
+---------
+
+Must-have fields:
+
+- tenantId
+
+- tenantCode
+
+- tenantName
+
+- status
+
+- createdAt
+
+- updatedAt
+
+ 
+
+DB table:
+
+- tenants
+
+ 
+
+DB links:
+
+- institutions.tenant_id -> tenants.tenant_id
+
+- periods.tenant_id -> tenants.tenant_id
+
+- users.tenant_id -> tenants.tenant_id
+
+- source_artifacts.tenant_id -> tenants.tenant_id
+
+- business_records.tenant_id -> tenants.tenant_id
+
+- kpi_definitions.tenant_id -> tenants.tenant_id
+
+- kpi_observations.tenant_id -> tenants.tenant_id
+
+- alerts.tenant_id -> tenants.tenant_id
+
+- anomalies.tenant_id -> tenants.tenant_id
+
+- insights.tenant_id -> tenants.tenant_id
+
+- recommendations.tenant_id -> tenants.tenant_id
+
+ 
+
+ 
+
+8) Institution
+
+--------------
+
+Must-have fields:
+
+- institutionId
+
+- tenantId
+
+- institutionCode
+
+- institutionName
+
+- institutionType
+
+- region
+
+- city
+
+- status
+
+- createdAt
+
+- updatedAt
+
+ 
+
+DB table:
+
+- institutions
+
+ 
+
+DB links:
+
+- institutions.tenant_id -> tenants.tenant_id
+
+- org_units.institution_id -> institutions.institution_id
+
+- users.institution_id -> institutions.institution_id
+
+- students.institution_id -> institutions.institution_id
+
+- teachers.institution_id -> institutions.institution_id
+
+- staff_members.institution_id -> institutions.institution_id
+
+- programs.institution_id -> institutions.institution_id
+
+- course_offerings.institution_id -> institutions.institution_id
+
+- source_artifacts.institution_id -> institutions.institution_id
+
+- enrollments.institution_id -> institutions.institution_id
+
+- attendance_records.institution_id -> institutions.institution_id
+
+- teaching_assignments.institution_id -> institutions.institution_id
+
+- budget_facts.institution_id -> institutions.institution_id
+
+- hr_facts.institution_id -> institutions.institution_id
+
+- business_records.institution_id -> institutions.institution_id
+
+- kpi_thresholds.institution_id -> institutions.institution_id
+
+- kpi_observations.institution_id -> institutions.institution_id
+
+- alerts.institution_id -> institutions.institution_id
+
+- anomalies.institution_id -> institutions.institution_id
+
+- insights.institution_id -> institutions.institution_id
+
+- recommendations.institution_id -> institutions.institution_id
+
+ 
+
+ 
+
+9) OrgUnit
+
+----------
+
+Must-have fields:
+
+- orgUnitId
+
+- institutionId
+
+- parentOrgUnitId      // nullable
+
+- orgUnitCode
+
+- orgUnitName
+
+- orgUnitType          // faculty | department | service | lab
+
+- status
+
+- createdAt
+
+- updatedAt
+
+ 
+
+DB table:
+
+- org_units
+
+ 
+
+DB links:
+
+- org_units.institution_id -> institutions.institution_id
+
+- org_units.parent_org_unit_id -> org_units.org_unit_id (nullable)
+
+- users.org_unit_id -> org_units.org_unit_id
+
+- teachers.org_unit_id -> org_units.org_unit_id
+
+- staff_members.org_unit_id -> org_units.org_unit_id
+
+- programs.org_unit_id -> org_units.org_unit_id
+
+- course_offerings.org_unit_id -> org_units.org_unit_id
+
+- attendance_records.org_unit_id -> org_units.org_unit_id
+
+- teaching_assignments.org_unit_id -> org_units.org_unit_id
+
+- budget_facts.org_unit_id -> org_units.org_unit_id
+
+- hr_facts.org_unit_id -> org_units.org_unit_id
+
+- business_records.org_unit_id -> org_units.org_unit_id
+
+- kpi_thresholds.org_unit_id -> org_units.org_unit_id
+
+- kpi_observations.org_unit_id -> org_units.org_unit_id
+
+- alerts.org_unit_id -> org_units.org_unit_id
+
+- anomalies.org_unit_id -> org_units.org_unit_id
+
+- insights.org_unit_id -> org_units.org_unit_id
+
+- recommendations.org_unit_id -> org_units.org_unit_id
+
+ 
+
+ 
+
+10) Period
+
+----------
+
+Must-have fields:
+
+- periodId
+
+- tenantId
+
+- periodCode
+
+- periodType           // month | quarter | semester | year
+
+- academicYear
+
+- startDate
+
+- endDate
+
+- isClosed
+
+- createdAt
+
+- updatedAt
+
+ 
+
+DB table:
+
+- periods
+
+ 
+
+DB links:
+
+- periods.tenant_id -> tenants.tenant_id
+
+- course_offerings.period_id -> periods.period_id
+
+- enrollments.period_id -> periods.period_id
+
+- attendance_records.period_id -> periods.period_id
+
+- assessment_results.period_id -> periods.period_id
+
+- teaching_assignments.period_id -> periods.period_id
+
+- budget_facts.period_id -> periods.period_id
+
+- hr_facts.period_id -> periods.period_id
+
+- business_records.period_id -> periods.period_id
+
+- kpi_thresholds.period_id -> periods.period_id
+
+- kpi_observations.period_id -> periods.period_id
+
+- alerts.period_id -> periods.period_id
+
+- anomalies.period_id -> periods.period_id
+
+- insights.period_id -> periods.period_id
+
+- recommendations.period_id -> periods.period_id
+
+ 
+
+ 
+
+11) UserAccount
+
+---------------
+
+Purpose:
+
+Represents the authenticated application user with one role code.
+
+This is needed because the frontend is backend-driven and access is role/permission based.
+
+ 
+
+Must-have fields:
+
+- userId
+
+- tenantId
+
+- institutionId        // nullable for platform admins
+
+- orgUnitId            // nullable
+
+- username
+
+- email
+
+- fullName
+
+- roleCode             // STUDENT | TEACHER | INSTITUTION_ADMIN | PLATFORM_ADMIN
+
+- accountStatus        // active | suspended | pending
+
+- createdAt
+
+- updatedAt
+
+ 
+
+DB table:
+
+- users
+
+ 
+
+DB links:
+
+- users.tenant_id -> tenants.tenant_id
+
+- users.institution_id -> institutions.institution_id (nullable)
+
+- users.org_unit_id -> org_units.org_unit_id (nullable)
+
+ 
+
+ 
+
+12) Student
+
+-----------
+
+Must-have fields:
+
+- studentId
+
+- institutionId
+
+- orgUnitId            // nullable
+
+- currentProgramId
+
+- studentCode
+
+- nationalIdMasked
+
+- firstName
+
+- lastName
+
+- birthDate
+
+- gender               // optional by governance, but kept if needed
+
+- admissionDate
+
+- graduationDate       // nullable
+
+- enrollmentStatus
+
+- createdAt
+
+- updatedAt
+
+ 
+
+DB table:
+
+- students
+
+ 
+
+DB links:
+
+- students.institution_id -> institutions.institution_id
+
+- students.org_unit_id -> org_units.org_unit_id (nullable)
+
+- students.current_program_id -> programs.program_id
+
+- enrollments.student_id -> students.student_id
+
+- attendance_records.subject_id can reference students.student_id when subject_type = STUDENT
+
+- assessment_results.student_id -> students.student_id
+
+ 
+
+ 
+
+13) Teacher
+
+-----------
+
+Must-have fields:
+
+- teacherId
+
+- institutionId
+
+- orgUnitId
+
+- teacherCode
+
+- firstName
+
+- lastName
+
+- gradeOrRank
+
+- specialization
+
+- hireDate
+
+- contractType
+
+- employmentStatus
+
+- createdAt
+
+- updatedAt
+
+ 
+
+DB table:
+
+- teachers
+
+ 
+
+DB links:
+
+- teachers.institution_id -> institutions.institution_id
+
+- teachers.org_unit_id -> org_units.org_unit_id
+
+- teaching_assignments.teacher_id -> teachers.teacher_id
+
+- attendance_records.subject_id can reference teachers.teacher_id when subject_type = TEACHER
+
+ 
+
+ 
+
+14) StaffMember
+
+---------------
+
+Must-have fields:
+
+- staffId
+
+- institutionId
+
+- orgUnitId
+
+- staffCode
+
+- firstName
+
+- lastName
+
+- staffType            // administrative | technical | support
+
+- hireDate
+
+- contractType
+
+- employmentStatus
+
+- createdAt
+
+- updatedAt
+
+ 
+
+DB table:
+
+- staff_members
+
+ 
+
+DB links:
+
+- staff_members.institution_id -> institutions.institution_id
+
+- staff_members.org_unit_id -> org_units.org_unit_id
+
+- attendance_records.subject_id can reference staff_members.staff_id when subject_type = STAFF
+
+ 
+
+ 
+
+15) Program
+
+-----------
+
+Must-have fields:
+
+- programId
+
+- institutionId
+
+- orgUnitId
+
+- programCode
+
+- programName
+
+- degreeLevel
+
+- durationYears
+
+- status
+
+- createdAt
+
+- updatedAt
+
+ 
+
+DB table:
+
+- programs
+
+ 
+
+DB links:
+
+- programs.institution_id -> institutions.institution_id
+
+- programs.org_unit_id -> org_units.org_unit_id
+
+- students.current_program_id -> programs.program_id
+
+- courses.program_id -> programs.program_id
+
+- enrollments.program_id -> programs.program_id
+
+ 
+
+ 
+
+16) Course
+
+----------
+
+Must-have fields:
+
+- courseId
+
+- programId
+
+- courseCode
+
+- courseName
+
+- courseType
+
+- creditValue
+
+- status
+
+- createdAt
+
+- updatedAt
+
+ 
+
+DB table:
+
+- courses
+
+ 
+
+DB links:
+
+- courses.program_id -> programs.program_id
+
+- course_offerings.course_id -> courses.course_id
+
+ 
+
+ 
+
+17) CourseOffering
+
+------------------
+
+Must-have fields:
+
+- courseOfferingId
+
+- courseId
+
+- institutionId
+
+- orgUnitId
+
+- periodId
+
+- sectionCode
+
+- deliveryMode         // onsite | online | hybrid
+
+- status
+
+- createdAt
+
+- updatedAt
+
+ 
+
+DB table:
+
+- course_offerings
+
+ 
+
+DB links:
+
+- course_offerings.course_id -> courses.course_id
+
+- course_offerings.institution_id -> institutions.institution_id
+
+- course_offerings.org_unit_id -> org_units.org_unit_id
+
+- course_offerings.period_id -> periods.period_id
+
+- attendance_records.course_offering_id -> course_offerings.course_offering_id (nullable)
+
+- assessment_results.course_offering_id -> course_offerings.course_offering_id
+
+- teaching_assignments.course_offering_id -> course_offerings.course_offering_id
+
+ 
+
+ 
+
+L3 — DOMAIN FACT ENTITIES
+
+=========================
+
+ 
+
+18) Enrollment
+
+--------------
+
+Must-have fields:
+
+- enrollmentId
+
+- studentId
+
+- institutionId
+
+- programId
+
+- periodId
+
+- enrollmentStatus
+
+- enrollmentDate
+
+- createdAt
+
+- updatedAt
+
+ 
+
+DB table:
+
+- enrollments
+
+ 
+
+DB links:
+
+- enrollments.student_id -> students.student_id
+
+- enrollments.institution_id -> institutions.institution_id
+
+- enrollments.program_id -> programs.program_id
+
+- enrollments.period_id -> periods.period_id
+
+ 
+
+ 
+
+19) AttendanceRecord
+
+--------------------
+
+Must-have fields:
+
+- attendanceId
+
+- subjectType          // STUDENT | TEACHER | STAFF
+
+- subjectId
+
+- courseOfferingId     // nullable
+
+- institutionId
+
+- orgUnitId            // nullable
+
+- periodId
+
+- attendanceRate       // nullable if event-based
+
+- attendanceValue      // nullable if rate-based
+
+- attendanceDate       // nullable if aggregated
+
+- createdAt
+
+- updatedAt
+
+ 
+
+DB table:
+
+- attendance_records
+
+ 
+
+DB links:
+
+- attendance_records.course_offering_id -> course_offerings.course_offering_id (nullable)
+
+- attendance_records.institution_id -> institutions.institution_id
+
+- attendance_records.org_unit_id -> org_units.org_unit_id (nullable)
+
+- attendance_records.period_id -> periods.period_id
+
+- attendance_records.subject_id is polymorphic:
+
+  - students.student_id when subject_type = STUDENT
+
+  - teachers.teacher_id when subject_type = TEACHER
+
+  - staff_members.staff_id when subject_type = STAFF
+
+ 
+
+ 
+
+20) AssessmentResult
+
+--------------------
+
+Must-have fields:
+
+- assessmentResultId
+
+- studentId
+
+- courseOfferingId
+
+- periodId
+
+- assessmentType       // exam | quiz | project | oral
+
+- score
+
+- grade
+
+- passed
+
+- resultDate
+
+- createdAt
+
+- updatedAt
+
+ 
+
+DB table:
+
+- assessment_results
+
+ 
+
+DB links:
+
+- assessment_results.student_id -> students.student_id
+
+- assessment_results.course_offering_id -> course_offerings.course_offering_id
+
+- assessment_results.period_id -> periods.period_id
+
+ 
+
+ 
+
+21) TeachingAssignment
+
+----------------------
+
+Must-have fields:
+
+- assignmentId
+
+- teacherId
+
+- courseOfferingId
+
+- institutionId
+
+- orgUnitId
+
+- periodId
+
+- hoursAssigned
+
+- assignmentRole       // primary | co-teacher | tutor
+
+- createdAt
+
+- updatedAt
+
+ 
+
+DB table:
+
+- teaching_assignments
+
+ 
+
+DB links:
+
+- teaching_assignments.teacher_id -> teachers.teacher_id
+
+- teaching_assignments.course_offering_id -> course_offerings.course_offering_id
+
+- teaching_assignments.institution_id -> institutions.institution_id
+
+- teaching_assignments.org_unit_id -> org_units.org_unit_id
+
+- teaching_assignments.period_id -> periods.period_id
+
+ 
+
+ 
+
+22) BudgetFact
+
+--------------
+
+Must-have fields:
+
+- budgetFactId
+
+- institutionId
+
+- orgUnitId            // nullable
+
+- periodId
+
+- budgetType           // allocated | consumed | committed
+
+- budgetCategory
+
+- amount
+
+- currency
+
+- sourceReference
+
+- createdAt
+
+- updatedAt
+
+ 
+
+DB table:
+
+- budget_facts
+
+ 
+
+DB links:
+
+- budget_facts.institution_id -> institutions.institution_id
+
+- budget_facts.org_unit_id -> org_units.org_unit_id (nullable)
+
+- budget_facts.period_id -> periods.period_id
+
+ 
+
+ 
+
+23) HrFact
+
+----------
+
+Must-have fields:
+
+- hrFactId
+
+- institutionId
+
+- orgUnitId            // nullable
+
+- periodId
+
+- subjectGroup         // teachers | admin_staff | all_staff
+
+- hrMetric             // absenteeism_rate | headcount | training_completed | teaching_load
+
+- value
+
+- unit
+
+- createdAt
+
+- updatedAt
+
+ 
+
+DB table:
+
+- hr_facts
+
+ 
+
+DB links:
+
+- hr_facts.institution_id -> institutions.institution_id
+
+- hr_facts.org_unit_id -> org_units.org_unit_id (nullable)
+
+- hr_facts.period_id -> periods.period_id
+
+ 
+
+ 
+
+L4 — CANONICAL CROSS-SERVICE ENTITY
+
+===================================
+
+ 
+
+24) BusinessRecord
+
+------------------
+
+Purpose:
+
+This is the single canonical cross-over record shared between ingestion, backend orchestration,
+
+KPI engine, and AI engine.
+
+ 
+
+Must-have header fields:
+
+- recordId
+
+- tenantId
+
+- institutionId
+
+- orgUnitId            // nullable
+
+- periodId
+
+- domainCode           // academic | finance | hr
+
+- processCode          // exams | attendance | budget | staffing | enrollment
+
+- entityType           // student | teacher | staff_member | program | institution | org_unit
+
+- entityId
+
+- attributeName        // success_rate | consumed_budget | absenteeism_rate | etc.
+
+- recordStatus         // draft | validated | rejected | final
+
+- sourceId
+
+- confidenceScore
+
+- schemaVersion
+
+- producedBy
+
+- createdAt
+
+- updatedAt
+
+ 
+
+Must-have value fields:
+
+- valueType            // numeric | text | boolean | date
+
+- valueNumeric         // nullable
+
+- valueText            // nullable
+
+- valueBoolean         // nullable
+
+- valueDate            // nullable
+
+- unit                 // nullable
+
+- currencyCode         // nullable
+
+ 
+
+DB tables:
+
+- business_records
+
+- business_record_values
+
+ 
+
+DB links:
+
+- business_records.tenant_id -> tenants.tenant_id
+
+- business_records.institution_id -> institutions.institution_id
+
+- business_records.org_unit_id -> org_units.org_unit_id (nullable)
+
+- business_records.period_id -> periods.period_id
+
+- business_records.source_id -> source_artifacts.source_id
+
+- business_record_values.record_id -> business_records.record_id
+
+- kpi_observations can be derived from business_records
+
+- lineage_events can connect raw/extracted/domain objects to business_records
+
+ 
+
+ 
+
+L5 — KPI GOVERNANCE ENTITIES
+
+============================
+
+ 
+
+25) KpiDefinition
+
+-----------------
+
+Must-have fields:
+
+- kpiId
+
+- tenantId
+
+- kpiCode
+
+- kpiName
+
+- domainCode
+
+- processCode
+
+- description
+
+- unit
+
+- valueType
+
+- aggregationType      // sum | avg | count | ratio | derived
+
+- direction            // higher_is_better | lower_is_better | target_is_best
+
+- scopeTypeDefault     // institution | org_unit | tenant
+
+- entityTypeDefault    // program | institution | staff_group
+
+- calculationFrequency // monthly | quarterly | semester | yearly
+
+- isActive
+
+- createdAt
+
+- updatedAt
+
+ 
+
+DB table:
+
+- kpi_definitions
+
+ 
+
+DB links:
+
+- kpi_definitions.tenant_id -> tenants.tenant_id
+
+- kpi_formula_versions.kpi_id -> kpi_definitions.kpi_id
+
+- kpi_thresholds.kpi_id -> kpi_definitions.kpi_id
+
+- kpi_observations.kpi_id -> kpi_definitions.kpi_id
+
+- alerts.kpi_id -> kpi_definitions.kpi_id
+
+ 
+
+ 
+
+26) KpiFormulaVersion
+
+---------------------
+
+Must-have fields:
+
+- formulaVersionId
+
+- kpiId
+
+- versionNumber
+
+- formulaExpression
+
+- logicType            // sql | java | python | rules | hybrid
+
+- effectiveFrom
+
+- effectiveTo          // nullable
+
+- isCurrent
+
+- createdAt
+
+- updatedAt
+
+ 
+
+DB table:
+
+- kpi_formula_versions
+
+ 
+
+DB links:
+
+- kpi_formula_versions.kpi_id -> kpi_definitions.kpi_id
+
+ 
+
+ 
+
+27) KpiThreshold
+
+----------------
+
+Must-have fields:
+
+- thresholdId
+
+- kpiId
+
+- institutionId        // nullable
+
+- orgUnitId            // nullable
+
+- periodId             // nullable
+
+- warningThreshold
+
+- criticalThreshold
+
+- targetValue          // nullable
+
+- createdAt
+
+- updatedAt
+
+ 
+
+DB table:
+
+- kpi_thresholds
+
+ 
+
+DB links:
+
+- kpi_thresholds.kpi_id -> kpi_definitions.kpi_id
+
+- kpi_thresholds.institution_id -> institutions.institution_id (nullable)
+
+- kpi_thresholds.org_unit_id -> org_units.org_unit_id (nullable)
+
+- kpi_thresholds.period_id -> periods.period_id (nullable)
+
+ 
+
+ 
+
+L6 — KPI RESULT / MONITORING ENTITIES
+
+=====================================
+
+ 
+
+28) KpiObservation
+
+------------------
+
+Must-have fields:
+
+- observationId
+
+- kpiId
+
+- tenantId
+
+- institutionId
+
+- orgUnitId            // nullable
+
+- periodId
+
+- scopeType            // institution | org_unit | tenant
+
+- scopeId
+
+- computedValue
+
+- unit
+
+- baselineValue        // nullable
+
+- trendDirection       // up | down | stable
+
+- status               // draft | final | superseded
+
+- calculationRunId
+
+- computedAt
+
+- createdAt
+
+- updatedAt
+
+ 
+
+DB table:
+
+- kpi_observations
+
+ 
+
+DB links:
+
+- kpi_observations.kpi_id -> kpi_definitions.kpi_id
+
+- kpi_observations.tenant_id -> tenants.tenant_id
+
+- kpi_observations.institution_id -> institutions.institution_id
+
+- kpi_observations.org_unit_id -> org_units.org_unit_id (nullable)
+
+- kpi_observations.period_id -> periods.period_id
+
+- alerts.observation_id -> kpi_observations.observation_id
+
+- decision_explanations.target_object_id can reference kpi_observations.observation_id when target_object_type = KPI_OBSERVATION
+
+ 
+
+ 
+
+29) Alert
+
+---------
+
+Must-have fields:
+
+- alertId
+
+- observationId        // nullable but recommended
+
+- kpiId
+
+- tenantId
+
+- institutionId
+
+- orgUnitId            // nullable
+
+- periodId
+
+- alertType            // threshold_breach | trend_deterioration | missing_data
+
+- severity             // low | medium | high | critical
+
+- observedValue
+
+- thresholdValue
+
+- message
+
+- status               // open | acknowledged | closed
+
+- createdAt
+
+- updatedAt
+
+ 
+
+DB table:
+
+- alerts
+
+ 
+
+DB links:
+
+- alerts.observation_id -> kpi_observations.observation_id (nullable)
+
+- alerts.kpi_id -> kpi_definitions.kpi_id
+
+- alerts.tenant_id -> tenants.tenant_id
+
+- alerts.institution_id -> institutions.institution_id
+
+- alerts.org_unit_id -> org_units.org_unit_id (nullable)
+
+- alerts.period_id -> periods.period_id
+
+- recommendations.justification may reference alert ids logically
+
+ 
+
+ 
+
+30) Anomaly
+
+-----------
+
+Must-have fields:
+
+- anomalyId
+
+- tenantId
+
+- institutionId
+
+- orgUnitId            // nullable
+
+- periodId
+
+- attributeName
+
+- anomalyType          // statistical_outlier | drift | sudden_change
+
+- expectedValue
+
+- actualValue
+
+- deviationScore
+
+- confidenceScore
+
+- detectionMethod
+
+- status
+
+- createdAt
+
+- updatedAt
+
+ 
+
+DB table:
+
+- anomalies
+
+ 
+
+DB links:
+
+- anomalies.tenant_id -> tenants.tenant_id
+
+- anomalies.institution_id -> institutions.institution_id
+
+- anomalies.org_unit_id -> org_units.org_unit_id (nullable)
+
+- anomalies.period_id -> periods.period_id
+
+- recommendations.justification may reference anomaly ids logically
+
+ 
+
+ 
+
+L7 — AI ANALYSIS ENTITIES
+
+=========================
+
+ 
+
+31) Insight
+
+-----------
+
+Must-have fields:
+
+- insightId
+
+- tenantId
+
+- institutionId
+
+- orgUnitId            // nullable
+
+- periodId
+
+- insightType          // executive_summary | comparative_analysis | risk_summary
+
+- title
+
+- summaryText
+
+- generatedBy          // ai-engine | hybrid-engine
+
+- confidenceScore
+
+- createdAt
+
+- updatedAt
+
+ 
+
+DB table:
+
+- insights
+
+ 
+
+DB links:
+
+- insights.tenant_id -> tenants.tenant_id
+
+- insights.institution_id -> institutions.institution_id
+
+- insights.org_unit_id -> org_units.org_unit_id (nullable)
+
+- insights.period_id -> periods.period_id
+
+- decision_explanations.target_object_id can reference insights.insight_id when target_object_type = INSIGHT
+
+ 
+
+ 
+
+32) Recommendation
+
+------------------
+
+Must-have fields:
+
+- recommendationId
+
+- tenantId
+
+- institutionId
+
+- orgUnitId            // nullable
+
+- periodId
+
+- category             // strategic_action | operational_action | data_quality_action
+
+- priority             // low | medium | high | urgent
+
+- title
+
+- description
+
+- justification
+
+- generatedBy          // rules-engine | ai-engine | hybrid-engine
+
+- status               // proposed | accepted | rejected | completed
+
+- createdAt
+
+- updatedAt
+
+ 
+
+DB table:
+
+- recommendations
+
+ 
+
+DB links:
+
+- recommendations.tenant_id -> tenants.tenant_id
+
+- recommendations.institution_id -> institutions.institution_id
+
+- recommendations.org_unit_id -> org_units.org_unit_id (nullable)
+
+- recommendations.period_id -> periods.period_id
+
+- decision_explanations.target_object_id can reference recommendations.recommendation_id when target_object_type = RECOMMENDATION
+
+ 
+
+ 
+
+33) DecisionExplanation
+
+-----------------------
+
+Must-have fields:
+
+- explanationId
+
+- targetObjectType     // KPI_OBSERVATION | ALERT | ANOMALY | INSIGHT | RECOMMENDATION
+
+- targetObjectId
+
+- explanationType      // threshold | statistical | rule | llm_summary
+
+- explanationText
+
+- confidenceScore
+
+- createdAt
+
+- updatedAt
+
+ 
+
+DB table:
+
+- decision_explanations
+
+ 
+
+DB links:
+
+- logical polymorphic reference to:
+
+  - kpi_observations.observation_id
+
+  - alerts.alert_id
+
+  - anomalies.anomaly_id
+
+  - insights.insight_id
+
+  - recommendations.recommendation_id
+
+ 
+
+ 
+FINAL DB TABLE LIST (REDUCED)
+
+=============================
+
+1. tenants
+
+2. institutions
+
+3. org_units
+
+4. periods
+
+5. users
+
+6. students
+
+7. teachers
+
+8. staff_members
+
+9. programs
+
+10. courses
+
+11. course_offerings
+
+12. ingestion_batches
+
+13. source_artifacts
+
+14. extraction_jobs
+
+15. extracted_fields
+
+16. validation_issues
+
+17. enrollments
+
+18. attendance_records
+
+19. assessment_results
+
+20. teaching_assignments
+
+21. budget_facts
+
+22. hr_facts
+
+23. business_records
+
+24. business_record_values
+
+25. kpi_definitions
+
+26. kpi_formula_versions
+
+27. kpi_thresholds
+
+28. kpi_observations
+
+29. alerts
+
+30. anomalies
+
+31. insights
+
+32. recommendations
+
+33. decision_explanations
+
+34. lineage_events
+
+35. service_runs
+
+ 
+
+ 
+
+MINIMAL JAVA PROJECT STRUCTURE (REDUCED)
+
+========================================
+
+ucar-backend/
+
+├─ pom.xml
+
+├─ src/main/java/com/ucar/platform/
+
+│  ├─ shared/
+
+│  ├─ ingestion/
+
+│  ├─ organization/
+
+│  ├─ users/
+
+│  ├─ academic/
+
+│  ├─ finance/
+
+│  ├─ hr/
+
+│  ├─ canonical/
+
+│  ├─ kpi/
+
+│  ├─ ai/
+
+│  └─ orchestration/
+
+└─ src/main/resources/
+
+   ├─ application.yml
+
+   └─ db/migration/
+
+ 
+
+Recommended internal structure for each module:
+
+module/
+
+├─ api/controller/
+
+├─ application/service/
+
+├─ domain/model/
+
+├─ infrastructure/entity/
+
+└─ infrastructure/repository/
