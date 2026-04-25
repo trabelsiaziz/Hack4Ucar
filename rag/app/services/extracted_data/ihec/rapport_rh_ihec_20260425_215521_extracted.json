@@ -1,0 +1,187 @@
+{
+  "metadata": {
+    "type": "rapport_rh",
+    "institution_id": "ihec",
+    "extraction_date": "2026-04-25T21:55:21.749017",
+    "source": "rapport_rh_ihec_2024-2025.pdf"
+  },
+  "data": {
+    "pages": [
+      {
+        "page_number": 1,
+        "title": "Rapport Ressources Humaines — IHEC Carthage",
+        "tables": [
+          {
+            "title": "KPI RH",
+            "headers": [
+              "KPI RH",
+              "Valeur",
+              "Unité",
+              "N-1",
+              "Variation",
+              "Seuil Warning"
+            ],
+            "rows": [
+              [
+                "headcount_teaching",
+                112,
+                "pers.",
+                108,
+                "+3.7%",
+                "—"
+              ],
+              [
+                "headcount_admin",
+                38,
+                "pers.",
+                40,
+                "-5.0%",
+                "—"
+              ],
+              [
+                "absenteeism_rate",
+                5.8,
+                "%",
+                "6.2%",
+                "-0.4pt",
+                "8%"
+              ],
+              [
+                "training_completed",
+                52,
+                "sessions",
+                44,
+                "+18.2%",
+                "—"
+              ],
+              [
+                "teaching_load",
+                18.4,
+                "h/sem",
+                17.8,
+                "+3.4%",
+                "—"
+              ],
+              [
+                "team_stability",
+                94.2,
+                "%",
+                "91.8%",
+                "+2.4pt",
+                "85%"
+              ],
+              [
+                "vacancy_rate",
+                2.3,
+                "%",
+                "4.1%",
+                "-1.8pt",
+                "10%"
+              ]
+            ]
+          },
+          {
+            "title": "Répartition du Personnel par Département",
+            "headers": [
+              "Département",
+              "Enseignants",
+              "Administratifs",
+              "Absentéisme %",
+              "Formations",
+              "Charge h/sem"
+            ],
+            "rows": [
+              [
+                "Commerce Int.",
+                28,
+                8,
+                4.2,
+                14,
+                19.2
+              ],
+              [
+                "Marketing",
+                22,
+                7,
+                5.1,
+                11,
+                17.8
+              ],
+              [
+                "Audit & Contrôle",
+                18,
+                6,
+                6.3,
+                9,
+                18.9
+              ],
+              [
+                "Finance",
+                24,
+                9,
+                8.9,
+                12,
+                18.1
+              ],
+              [
+                "Informatique Gestion",
+                20,
+                8,
+                5.5,
+                6,
+                17.2
+              ]
+            ]
+          }
+        ],
+        "metrics": {
+          "total_agents": 150,
+          "teaching_staff": 112,
+          "admin_staff": 38,
+          "absenteeism_rate": 5.8,
+          "trainings_completed": 52
+        },
+        "text_sections": [
+          "L'IHEC Carthage emploie au total 150 agents dont 112 enseignants permanents (74.7%) et 38 personnels administratifs.",
+          "Le taux d'absentéisme global est de 5.8%, bien en dessous du seuil d'alerte de 8%, témoignant d'un climat social satisfaisant.",
+          "52 formations ont été complétées cette année, soit une moyenne de 1.1 formation par agent.",
+          "Le département de Commerce International concentre le plus grand effectif enseignant avec 28 enseignants, suivi de Marketing (22) et Audit & Contrôle (18).",
+          "Le taux d'absentéisme le plus préoccupant concerne le département de Finance avec 8.9%, juste au-dessus du seuil d'alerte."
+        ]
+      },
+      {
+        "page_number": 1,
+        "title": "Taux d'absentéisme par département — IHEC 2024-2025",
+        "tables": [],
+        "metrics": {
+          "headcount_teaching": 112,
+          "headcount_admin": 38,
+          "absenteeism_rate": 5.8,
+          "training_completed": 52,
+          "teaching_load": 18.4,
+          "team_stability": 94.2
+        },
+        "text_sections": [
+          "Figure 1 — Absentéisme par département (rouge = au-dessus du seuil d'alerte 8%)",
+          "institution_id: ihec",
+          "domain: hr",
+          "period_id: 2024-2025",
+          "tenant_id: ucar",
+          "schema_version: 1.0"
+        ],
+        "charts": [
+          {
+            "title": "Taux d'absentéisme par département",
+            "data": {
+              "Commerce Int.": 4.2,
+              "Marketing": 5.1,
+              "Audit & Contrôle": 6.3,
+              "Finance": 8.9,
+              "Informatique Gestion": 5.5
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

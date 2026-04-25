@@ -1,0 +1,46 @@
+{
+  "document_id": "2d0534c2",
+  "document_type": "rapport",
+  "institution_id": "enstab",
+  "period_id": "2025-S1",
+  "source_file": "rapport_2025_s1.pdf",
+  "extracted_at": "2026-04-25T19:19:28.870558+00:00",
+  "data": {
+    "titre": "Rapport Semestriel S1 2025",
+    "institution": "ENSTAB",
+    "date": "2025-04-25",
+    "resume_executif": "Le semestre S1 2025 a enregistré une participation active de 542 étudiants avec un taux de réussite de 87%",
+    "statistiques": {
+      "total_etudiants": 542,
+      "reussis": 471,
+      "redoubles": 45,
+      "taux_reussite": "87%",
+      "moyenne_generale": "14.2/20",
+      "meilleure_note": 19.5,
+      "pire_note": 8.0
+    },
+    "matieres_principales": [
+      {
+        "nom": "Algorithmique",
+        "moyenne": 14.5
+      },
+      {
+        "nom": "Programmation",
+        "moyenne": 13.8
+      },
+      {
+        "nom": "Base de données",
+        "moyenne": 15.1
+      },
+      {
+        "nom": "Réseaux",
+        "moyenne": 12.9
+      }
+    ],
+    "recommandations": [
+      "Renforcer l'enseignement en Réseaux",
+      "Augmenter les séances pratiques",
+      "Mettre en place un tutorat"
+    ]
+  }
+}

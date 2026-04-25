@@ -1,0 +1,1033 @@
+{
+  "source_artifact": {
+    "source_id": "src-cc75fe74",
+    "source_type": "xlsx",
+    "file_name": "ISSTE_Conference_Scientifique_2025.xlsx",
+    "uploaded_by": "system",
+    "uploaded_at": "2026-04-25T17:35:41.165950+00:00",
+    "parser_type": "excel-extractor-v1",
+    "institution_id": "isste"
+  },
+  "business_records": [],
+  "students": [
+    {
+      "source_id": "src-cc75fe74",
+      "institution_id": "isste",
+      "period_id": "2025-S1",
+      "extracted_at": "2026-04-25T17:35:41.157613+00:00",
+      "student": {
+        "nom": "Institution / Pays",
+        "prenom": null,
+        "cin": null,
+        "numero_etudiant": null
+      },
+      "bilan": {
+        "moyenne_generale": null,
+        "mention": null,
+        "resultat_global": null,
+        "rang": null,
+        "credits_obtenus": null
+      },
+      "notes": []
+    },
+    {
+      "source_id": "src-cc75fe74",
+      "institution_id": "isste",
+      "period_id": "2025-S1",
+      "extracted_at": "2026-04-25T17:35:41.157613+00:00",
+      "student": {
+        "nom": "Univ. de Tunis / Tunisie",
+        "prenom": null,
+        "cin": null,
+        "numero_etudiant": null
+      },
+      "bilan": {
+        "moyenne_generale": null,
+        "mention": null,
+        "resultat_global": null,
+        "rang": null,
+        "credits_obtenus": null
+      },
+      "notes": [
+        {
+          "matiere": "unnamed: 4",
+          "moyenne": 3.0,
+          "resultat_matiere": "Ajourné"
+        }
+      ]
+    },
+    {
+      "source_id": "src-cc75fe74",
+      "institution_id": "isste",
+      "period_id": "2025-S1",
+      "extracted_at": "2026-04-25T17:35:41.157613+00:00",
+      "student": {
+        "nom": "Univ. Paris-Saclay / France",
+        "prenom": null,
+        "cin": null,
+        "numero_etudiant": null
+      },
+      "bilan": {
+        "moyenne_generale": null,
+        "mention": null,
+        "resultat_global": null,
+        "rang": null,
+        "credits_obtenus": null
+      },
+      "notes": [
+        {
+          "matiere": "unnamed: 4",
+          "moyenne": 3.0,
+          "resultat_matiere": "Ajourné"
+        }
+      ]
+    },
+    {
+      "source_id": "src-cc75fe74",
+      "institution_id": "isste",
+      "period_id": "2025-S1",
+      "extracted_at": "2026-04-25T17:35:41.157613+00:00",
+      "student": {
+        "nom": "Univ. Mohammed V / Maroc",
+        "prenom": null,
+        "cin": null,
+        "numero_etudiant": null
+      },
+      "bilan": {
+        "moyenne_generale": null,
+        "mention": null,
+        "resultat_global": null,
+        "rang": null,
+        "credits_obtenus": null
+      },
+      "notes": [
+        {
+          "matiere": "unnamed: 4",
+          "moyenne": 2.0,
+          "resultat_matiere": "Ajourné"
+        }
+      ]
+    },
+    {
+      "source_id": "src-cc75fe74",
+      "institution_id": "isste",
+      "period_id": "2025-S1",
+      "extracted_at": "2026-04-25T17:35:41.157613+00:00",
+      "student": {
+        "nom": "TU Berlin / Allemagne",
+        "prenom": null,
+        "cin": null,
+        "numero_etudiant": null
+      },
+      "bilan": {
+        "moyenne_generale": null,
+        "mention": null,
+        "resultat_global": null,
+        "rang": null,
+        "credits_obtenus": null
+      },
+      "notes": [
+        {
+          "matiere": "unnamed: 4",
+          "moyenne": 3.0,
+          "resultat_matiere": "Ajourné"
+        }
+      ]
+    },
+    {
+      "source_id": "src-cc75fe74",
+      "institution_id": "isste",
+      "period_id": "2025-S1",
+      "extracted_at": "2026-04-25T17:35:41.157613+00:00",
+      "student": {
+        "nom": "ENIS Sfax / Tunisie",
+        "prenom": null,
+        "cin": null,
+        "numero_etudiant": null
+      },
+      "bilan": {
+        "moyenne_generale": null,
+        "mention": null,
+        "resultat_global": null,
+        "rang": null,
+        "credits_obtenus": null
+      },
+      "notes": [
+        {
+          "matiere": "unnamed: 4",
+          "moyenne": 2.0,
+          "resultat_matiere": "Ajourné"
+        }
+      ]
+    },
+    {
+      "source_id": "src-cc75fe74",
+      "institution_id": "isste",
+      "period_id": "2025-S1",
+      "extracted_at": "2026-04-25T17:35:41.157613+00:00",
+      "student": {
+        "nom": "Univ. Mohammed VI / Maroc",
+        "prenom": null,
+        "cin": null,
+        "numero_etudiant": null
+      },
+      "bilan": {
+        "moyenne_generale": null,
+        "mention": null,
+        "resultat_global": null,
+        "rang": null,
+        "credits_obtenus": null
+      },
+      "notes": [
+        {
+          "matiere": "unnamed: 4",
+          "moyenne": 3.0,
+          "resultat_matiere": "Ajourné"
+        }
+      ]
+    },
+    {
+      "source_id": "src-cc75fe74",
+      "institution_id": "isste",
+      "period_id": "2025-S1",
+      "extracted_at": "2026-04-25T17:35:41.157613+00:00",
+      "student": {
+        "nom": "MIT / États-Unis",
+        "prenom": null,
+        "cin": null,
+        "numero_etudiant": null
+      },
+      "bilan": {
+        "moyenne_generale": null,
+        "mention": null,
+        "resultat_global": null,
+        "rang": null,
+        "credits_obtenus": null
+      },
+      "notes": [
+        {
+          "matiere": "unnamed: 4",
+          "moyenne": 4.0,
+          "resultat_matiere": "Ajourné"
+        }
+      ]
+    },
+    {
+      "source_id": "src-cc75fe74",
+      "institution_id": "isste",
+      "period_id": "2025-S1",
+      "extracted_at": "2026-04-25T17:35:41.157613+00:00",
+      "student": {
+        "nom": "Univ. King Saud / Arabie S.",
+        "prenom": null,
+        "cin": null,
+        "numero_etudiant": null
+      },
+      "bilan": {
+        "moyenne_generale": null,
+        "mention": null,
+        "resultat_global": null,
+        "rang": null,
+        "credits_obtenus": null
+      },
+      "notes": [
+        {
+          "matiere": "unnamed: 4",
+          "moyenne": 3.0,
+          "resultat_matiere": "Ajourné"
+        }
+      ]
+    },
+    {
+      "source_id": "src-cc75fe74",
+      "institution_id": "isste",
+      "period_id": "2025-S1",
+      "extracted_at": "2026-04-25T17:35:41.157613+00:00",
+      "student": {
+        "nom": "Tsinghua Univ. / Chine",
+        "prenom": null,
+        "cin": null,
+        "numero_etudiant": null
+      },
+      "bilan": {
+        "moyenne_generale": null,
+        "mention": null,
+        "resultat_global": null,
+        "rang": null,
+        "credits_obtenus": null
+      },
+      "notes": [
+        {
+          "matiere": "unnamed: 4",
+          "moyenne": 3.0,
+          "resultat_matiere": "Ajourné"
+        }
+      ]
+    },
+    {
+      "source_id": "src-cc75fe74",
+      "institution_id": "isste",
+      "period_id": "2025-S1",
+      "extracted_at": "2026-04-25T17:35:41.157613+00:00",
+      "student": {
+        "nom": "ENIG Gabès / Tunisie",
+        "prenom": null,
+        "cin": null,
+        "numero_etudiant": null
+      },
+      "bilan": {
+        "moyenne_generale": null,
+        "mention": null,
+        "resultat_global": null,
+        "rang": null,
+        "credits_obtenus": null
+      },
+      "notes": [
+        {
+          "matiere": "unnamed: 4",
+          "moyenne": 2.0,
+          "resultat_matiere": "Ajourné"
+        }
+      ]
+    },
+    {
+      "source_id": "src-cc75fe74",
+      "institution_id": "isste",
+      "period_id": "2025-S1",
+      "extracted_at": "2026-04-25T17:35:41.160219+00:00",
+      "student": {
+        "nom": "Catégorie",
+        "prenom": null,
+        "cin": null,
+        "numero_etudiant": null
+      },
+      "bilan": {
+        "moyenne_generale": null,
+        "mention": null,
+        "resultat_global": null,
+        "rang": null,
+        "credits_obtenus": null
+      },
+      "notes": []
+    },
+    {
+      "source_id": "src-cc75fe74",
+      "institution_id": "isste",
+      "period_id": "2025-S1",
+      "extracted_at": "2026-04-25T17:35:41.160219+00:00",
+      "student": {
+        "nom": "Papeterie",
+        "prenom": null,
+        "cin": null,
+        "numero_etudiant": null
+      },
+      "bilan": {
+        "moyenne_generale": null,
+        "mention": null,
+        "resultat_global": null,
+        "rang": null,
+        "credits_obtenus": null
+      },
+      "notes": []
+    },
+    {
+      "source_id": "src-cc75fe74",
+      "institution_id": "isste",
+      "period_id": "2025-S1",
+      "extracted_at": "2026-04-25T17:35:41.160219+00:00",
+      "student": {
+        "nom": "Papeterie",
+        "prenom": null,
+        "cin": null,
+        "numero_etudiant": null
+      },
+      "bilan": {
+        "moyenne_generale": null,
+        "mention": null,
+        "resultat_global": null,
+        "rang": null,
+        "credits_obtenus": null
+      },
+      "notes": []
+    },
+    {
+      "source_id": "src-cc75fe74",
+      "institution_id": "isste",
+      "period_id": "2025-S1",
+      "extracted_at": "2026-04-25T17:35:41.160219+00:00",
+      "student": {
+        "nom": "Papeterie",
+        "prenom": null,
+        "cin": null,
+        "numero_etudiant": null
+      },
+      "bilan": {
+        "moyenne_generale": null,
+        "mention": null,
+        "resultat_global": null,
+        "rang": null,
+        "credits_obtenus": null
+      },
+      "notes": []
+    },
+    {
+      "source_id": "src-cc75fe74",
+      "institution_id": "isste",
+      "period_id": "2025-S1",
+      "extracted_at": "2026-04-25T17:35:41.160219+00:00",
+      "student": {
+        "nom": "Identification",
+        "prenom": null,
+        "cin": null,
+        "numero_etudiant": null
+      },
+      "bilan": {
+        "moyenne_generale": null,
+        "mention": null,
+        "resultat_global": null,
+        "rang": null,
+        "credits_obtenus": null
+      },
+      "notes": []
+    },
+    {
+      "source_id": "src-cc75fe74",
+      "institution_id": "isste",
+      "period_id": "2025-S1",
+      "extracted_at": "2026-04-25T17:35:41.160219+00:00",
+      "student": {
+        "nom": "Identification",
+        "prenom": null,
+        "cin": null,
+        "numero_etudiant": null
+      },
+      "bilan": {
+        "moyenne_generale": null,
+        "mention": null,
+        "resultat_global": null,
+        "rang": null,
+        "credits_obtenus": null
+      },
+      "notes": []
+    },
+    {
+      "source_id": "src-cc75fe74",
+      "institution_id": "isste",
+      "period_id": "2025-S1",
+      "extracted_at": "2026-04-25T17:35:41.160219+00:00",
+      "student": {
+        "nom": "Impression",
+        "prenom": null,
+        "cin": null,
+        "numero_etudiant": null
+      },
+      "bilan": {
+        "moyenne_generale": null,
+        "mention": null,
+        "resultat_global": null,
+        "rang": null,
+        "credits_obtenus": null
+      },
+      "notes": []
+    },
+    {
+      "source_id": "src-cc75fe74",
+      "institution_id": "isste",
+      "period_id": "2025-S1",
+      "extracted_at": "2026-04-25T17:35:41.160219+00:00",
+      "student": {
+        "nom": "Signalétique",
+        "prenom": null,
+        "cin": null,
+        "numero_etudiant": null
+      },
+      "bilan": {
+        "moyenne_generale": null,
+        "mention": null,
+        "resultat_global": null,
+        "rang": null,
+        "credits_obtenus": null
+      },
+      "notes": []
+    },
+    {
+      "source_id": "src-cc75fe74",
+      "institution_id": "isste",
+      "period_id": "2025-S1",
+      "extracted_at": "2026-04-25T17:35:41.160219+00:00",
+      "student": {
+        "nom": "Signalétique",
+        "prenom": null,
+        "cin": null,
+        "numero_etudiant": null
+      },
+      "bilan": {
+        "moyenne_generale": null,
+        "mention": null,
+        "resultat_global": null,
+        "rang": null,
+        "credits_obtenus": null
+      },
+      "notes": []
+    },
+    {
+      "source_id": "src-cc75fe74",
+      "institution_id": "isste",
+      "period_id": "2025-S1",
+      "extracted_at": "2026-04-25T17:35:41.160219+00:00",
+      "student": {
+        "nom": "Impression",
+        "prenom": null,
+        "cin": null,
+        "numero_etudiant": null
+      },
+      "bilan": {
+        "moyenne_generale": null,
+        "mention": null,
+        "resultat_global": null,
+        "rang": null,
+        "credits_obtenus": null
+      },
+      "notes": []
+    },
+    {
+      "source_id": "src-cc75fe74",
+      "institution_id": "isste",
+      "period_id": "2025-S1",
+      "extracted_at": "2026-04-25T17:35:41.160219+00:00",
+      "student": {
+        "nom": "Kit participant",
+        "prenom": null,
+        "cin": null,
+        "numero_etudiant": null
+      },
+      "bilan": {
+        "moyenne_generale": null,
+        "mention": null,
+        "resultat_global": null,
+        "rang": null,
+        "credits_obtenus": null
+      },
+      "notes": []
+    },
+    {
+      "source_id": "src-cc75fe74",
+      "institution_id": "isste",
+      "period_id": "2025-S1",
+      "extracted_at": "2026-04-25T17:35:41.160219+00:00",
+      "student": {
+        "nom": "Informatique",
+        "prenom": null,
+        "cin": null,
+        "numero_etudiant": null
+      },
+      "bilan": {
+        "moyenne_generale": null,
+        "mention": null,
+        "resultat_global": null,
+        "rang": null,
+        "credits_obtenus": null
+      },
+      "notes": []
+    },
+    {
+      "source_id": "src-cc75fe74",
+      "institution_id": "isste",
+      "period_id": "2025-S1",
+      "extracted_at": "2026-04-25T17:35:41.160219+00:00",
+      "student": {
+        "nom": "Papeterie",
+        "prenom": null,
+        "cin": null,
+        "numero_etudiant": null
+      },
+      "bilan": {
+        "moyenne_generale": null,
+        "mention": null,
+        "resultat_global": null,
+        "rang": null,
+        "credits_obtenus": null
+      },
+      "notes": []
+    },
+    {
+      "source_id": "src-cc75fe74",
+      "institution_id": "isste",
+      "period_id": "2025-S1",
+      "extracted_at": "2026-04-25T17:35:41.160219+00:00",
+      "student": {
+        "nom": "AV",
+        "prenom": null,
+        "cin": null,
+        "numero_etudiant": null
+      },
+      "bilan": {
+        "moyenne_generale": null,
+        "mention": null,
+        "resultat_global": null,
+        "rang": null,
+        "credits_obtenus": null
+      },
+      "notes": []
+    },
+    {
+      "source_id": "src-cc75fe74",
+      "institution_id": "isste",
+      "period_id": "2025-S1",
+      "extracted_at": "2026-04-25T17:35:41.160219+00:00",
+      "student": {
+        "nom": "AV",
+        "prenom": null,
+        "cin": null,
+        "numero_etudiant": null
+      },
+      "bilan": {
+        "moyenne_generale": null,
+        "mention": null,
+        "resultat_global": null,
+        "rang": null,
+        "credits_obtenus": null
+      },
+      "notes": []
+    },
+    {
+      "source_id": "src-cc75fe74",
+      "institution_id": "isste",
+      "period_id": "2025-S1",
+      "extracted_at": "2026-04-25T17:35:41.160219+00:00",
+      "student": {
+        "nom": "AV",
+        "prenom": null,
+        "cin": null,
+        "numero_etudiant": null
+      },
+      "bilan": {
+        "moyenne_generale": null,
+        "mention": null,
+        "resultat_global": null,
+        "rang": null,
+        "credits_obtenus": null
+      },
+      "notes": []
+    },
+    {
+      "source_id": "src-cc75fe74",
+      "institution_id": "isste",
+      "period_id": "2025-S1",
+      "extracted_at": "2026-04-25T17:35:41.160219+00:00",
+      "student": {
+        "nom": "AV",
+        "prenom": null,
+        "cin": null,
+        "numero_etudiant": null
+      },
+      "bilan": {
+        "moyenne_generale": null,
+        "mention": null,
+        "resultat_global": null,
+        "rang": null,
+        "credits_obtenus": null
+      },
+      "notes": []
+    },
+    {
+      "source_id": "src-cc75fe74",
+      "institution_id": "isste",
+      "period_id": "2025-S1",
+      "extracted_at": "2026-04-25T17:35:41.161222+00:00",
+      "student": {
+        "nom": "AV",
+        "prenom": null,
+        "cin": null,
+        "numero_etudiant": null
+      },
+      "bilan": {
+        "moyenne_generale": null,
+        "mention": null,
+        "resultat_global": null,
+        "rang": null,
+        "credits_obtenus": null
+      },
+      "notes": []
+    },
+    {
+      "source_id": "src-cc75fe74",
+      "institution_id": "isste",
+      "period_id": "2025-S1",
+      "extracted_at": "2026-04-25T17:35:41.161222+00:00",
+      "student": {
+        "nom": "Logistique",
+        "prenom": null,
+        "cin": null,
+        "numero_etudiant": null
+      },
+      "bilan": {
+        "moyenne_generale": null,
+        "mention": null,
+        "resultat_global": null,
+        "rang": null,
+        "credits_obtenus": null
+      },
+      "notes": []
+    },
+    {
+      "source_id": "src-cc75fe74",
+      "institution_id": "isste",
+      "period_id": "2025-S1",
+      "extracted_at": "2026-04-25T17:35:41.161222+00:00",
+      "student": {
+        "nom": "Logistique",
+        "prenom": null,
+        "cin": null,
+        "numero_etudiant": null
+      },
+      "bilan": {
+        "moyenne_generale": null,
+        "mention": null,
+        "resultat_global": null,
+        "rang": null,
+        "credits_obtenus": null
+      },
+      "notes": []
+    },
+    {
+      "source_id": "src-cc75fe74",
+      "institution_id": "isste",
+      "period_id": "2025-S1",
+      "extracted_at": "2026-04-25T17:35:41.161222+00:00",
+      "student": {
+        "nom": "Décoration",
+        "prenom": null,
+        "cin": null,
+        "numero_etudiant": null
+      },
+      "bilan": {
+        "moyenne_generale": null,
+        "mention": null,
+        "resultat_global": null,
+        "rang": null,
+        "credits_obtenus": null
+      },
+      "notes": []
+    },
+    {
+      "source_id": "src-cc75fe74",
+      "institution_id": "isste",
+      "period_id": "2025-S1",
+      "extracted_at": "2026-04-25T17:35:41.164221+00:00",
+      "student": {
+        "nom": "Titre",
+        "prenom": null,
+        "cin": null,
+        "numero_etudiant": null
+      },
+      "bilan": {
+        "moyenne_generale": null,
+        "mention": null,
+        "resultat_global": null,
+        "rang": null,
+        "credits_obtenus": null
+      },
+      "notes": []
+    },
+    {
+      "source_id": "src-cc75fe74",
+      "institution_id": "isste",
+      "period_id": "2025-S1",
+      "extracted_at": "2026-04-25T17:35:41.164221+00:00",
+      "student": {
+        "nom": "Professeur",
+        "prenom": null,
+        "cin": null,
+        "numero_etudiant": null
+      },
+      "bilan": {
+        "moyenne_generale": null,
+        "mention": null,
+        "resultat_global": null,
+        "rang": null,
+        "credits_obtenus": null
+      },
+      "notes": [
+        {
+          "matiere": "unnamed: 5",
+          "moyenne": 2.0,
+          "resultat_matiere": "Ajourné"
+        }
+      ]
+    },
+    {
+      "source_id": "src-cc75fe74",
+      "institution_id": "isste",
+      "period_id": "2025-S1",
+      "extracted_at": "2026-04-25T17:35:41.164221+00:00",
+      "student": {
+        "nom": "Professeur",
+        "prenom": null,
+        "cin": null,
+        "numero_etudiant": null
+      },
+      "bilan": {
+        "moyenne_generale": null,
+        "mention": null,
+        "resultat_global": null,
+        "rang": null,
+        "credits_obtenus": null
+      },
+      "notes": [
+        {
+          "matiere": "unnamed: 5",
+          "moyenne": 1.5,
+          "resultat_matiere": "Ajourné"
+        }
+      ]
+    },
+    {
+      "source_id": "src-cc75fe74",
+      "institution_id": "isste",
+      "period_id": "2025-S1",
+      "extracted_at": "2026-04-25T17:35:41.164221+00:00",
+      "student": {
+        "nom": "MCF",
+        "prenom": null,
+        "cin": null,
+        "numero_etudiant": null
+      },
+      "bilan": {
+        "moyenne_generale": null,
+        "mention": null,
+        "resultat_global": null,
+        "rang": null,
+        "credits_obtenus": null
+      },
+      "notes": [
+        {
+          "matiere": "unnamed: 5",
+          "moyenne": 1.5,
+          "resultat_matiere": "Ajourné"
+        }
+      ]
+    },
+    {
+      "source_id": "src-cc75fe74",
+      "institution_id": "isste",
+      "period_id": "2025-S1",
+      "extracted_at": "2026-04-25T17:35:41.164221+00:00",
+      "student": {
+        "nom": "Professeur",
+        "prenom": null,
+        "cin": null,
+        "numero_etudiant": null
+      },
+      "bilan": {
+        "moyenne_generale": null,
+        "mention": null,
+        "resultat_global": null,
+        "rang": null,
+        "credits_obtenus": null
+      },
+      "notes": [
+        {
+          "matiere": "unnamed: 5",
+          "moyenne": 1.5,
+          "resultat_matiere": "Ajourné"
+        }
+      ]
+    },
+    {
+      "source_id": "src-cc75fe74",
+      "institution_id": "isste",
+      "period_id": "2025-S1",
+      "extracted_at": "2026-04-25T17:35:41.164221+00:00",
+      "student": {
+        "nom": "Dr.-Ing.",
+        "prenom": null,
+        "cin": null,
+        "numero_etudiant": null
+      },
+      "bilan": {
+        "moyenne_generale": null,
+        "mention": null,
+        "resultat_global": null,
+        "rang": null,
+        "credits_obtenus": null
+      },
+      "notes": [
+        {
+          "matiere": "unnamed: 5",
+          "moyenne": 1.0,
+          "resultat_matiere": "Ajourné"
+        }
+      ]
+    },
+    {
+      "source_id": "src-cc75fe74",
+      "institution_id": "isste",
+      "period_id": "2025-S1",
+      "extracted_at": "2026-04-25T17:35:41.164221+00:00",
+      "student": {
+        "nom": "Professeur",
+        "prenom": null,
+        "cin": null,
+        "numero_etudiant": null
+      },
+      "bilan": {
+        "moyenne_generale": null,
+        "mention": null,
+        "resultat_global": null,
+        "rang": null,
+        "credits_obtenus": null
+      },
+      "notes": [
+        {
+          "matiere": "unnamed: 5",
+          "moyenne": 3.0,
+          "resultat_matiere": "Ajourné"
+        }
+      ]
+    },
+    {
+      "source_id": "src-cc75fe74",
+      "institution_id": "isste",
+      "period_id": "2025-S1",
+      "extracted_at": "2026-04-25T17:35:41.164221+00:00",
+      "student": {
+        "nom": "Docteur",
+        "prenom": null,
+        "cin": null,
+        "numero_etudiant": null
+      },
+      "bilan": {
+        "moyenne_generale": null,
+        "mention": null,
+        "resultat_global": null,
+        "rang": null,
+        "credits_obtenus": null
+      },
+      "notes": [
+        {
+          "matiere": "unnamed: 5",
+          "moyenne": 1.0,
+          "resultat_matiere": "Ajourné"
+        }
+      ]
+    },
+    {
+      "source_id": "src-cc75fe74",
+      "institution_id": "isste",
+      "period_id": "2025-S1",
+      "extracted_at": "2026-04-25T17:35:41.164221+00:00",
+      "student": {
+        "nom": "Docteur",
+        "prenom": null,
+        "cin": null,
+        "numero_etudiant": null
+      },
+      "bilan": {
+        "moyenne_generale": null,
+        "mention": null,
+        "resultat_global": null,
+        "rang": null,
+        "credits_obtenus": null
+      },
+      "notes": [
+        {
+          "matiere": "unnamed: 5",
+          "moyenne": 1.0,
+          "resultat_matiere": "Ajourné"
+        }
+      ]
+    },
+    {
+      "source_id": "src-cc75fe74",
+      "institution_id": "isste",
+      "period_id": "2025-S1",
+      "extracted_at": "2026-04-25T17:35:41.164221+00:00",
+      "student": {
+        "nom": "Docteur",
+        "prenom": null,
+        "cin": null,
+        "numero_etudiant": null
+      },
+      "bilan": {
+        "moyenne_generale": null,
+        "mention": null,
+        "resultat_global": null,
+        "rang": null,
+        "credits_obtenus": null
+      },
+      "notes": [
+        {
+          "matiere": "unnamed: 5",
+          "moyenne": 1.0,
+          "resultat_matiere": "Ajourné"
+        }
+      ]
+    },
+    {
+      "source_id": "src-cc75fe74",
+      "institution_id": "isste",
+      "period_id": "2025-S1",
+      "extracted_at": "2026-04-25T17:35:41.165220+00:00",
+      "student": {
+        "nom": "Professeure",
+        "prenom": null,
+        "cin": null,
+        "numero_etudiant": null
+      },
+      "bilan": {
+        "moyenne_generale": null,
+        "mention": null,
+        "resultat_global": null,
+        "rang": null,
+        "credits_obtenus": null
+      },
+      "notes": [
+        {
+          "matiere": "unnamed: 5",
+          "moyenne": 6.0,
+          "resultat_matiere": "Ajourné"
+        }
+      ]
+    }
+  ],
+  "sheets_summary": {
+    "Vue Générale": {
+      "type": "budget",
+      "records": 0,
+      "students": 0
+    },
+    "Restauration": {
+      "type": "budget",
+      "records": 0,
+      "students": 0
+    },
+    "Hébergement": {
+      "type": "notes_etudiants",
+      "records": 0,
+      "students": 11
+    },
+    "Matériel & Fournitures": {
+      "type": "notes_etudiants",
+      "records": 0,
+      "students": 21
+    },
+    "Transport & Logistique": {
+      "type": "budget",
+      "records": 0,
+      "students": 0
+    },
+    "Honoraires": {
+      "type": "notes_etudiants",
+      "records": 0,
+      "students": 11
+    },
+    "KPI & Tableau de Bord": {
+      "type": "budget",
+      "records": 0,
+      "students": 0
+    }
+  },
+  "institution_id": "isste",
+  "period_id": "2025-S1"
+}

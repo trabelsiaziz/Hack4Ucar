@@ -1,0 +1,21 @@
+{
+  "metadata": {
+    "pdf_file": "rapport_rh_ihec_2024-2025.pdf",
+    "document_type": "rapport_rh",
+    "institution_id": "ihec",
+    "period_id": "exit",
+    "extraction_date": "2026-04-25T21:17:55.166453",
+    "total_pages": 2,
+    "extraction_method": "GPT-4 Vision API"
+  },
+  "pages": [
+    {
+      "page_number": 1,
+      "error": "Error code: 404 - {'error': {'message': 'The model `gpt-4-vision-preview` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}"
+    },
+    {
+      "page_number": 2,
+      "error": "Error code: 404 - {'error': {'message': 'The model `gpt-4-vision-preview` has been deprecated, learn more here: https://platform.openai.com/docs/deprecations', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}"
+    }
+  ]
+}

@@ -1,0 +1,164 @@
+{
+  "metadata": {
+    "type": "bulletin",
+    "institution_id": "bulletin",
+    "extraction_date": "2026-04-25T21:55:21.740346",
+    "source": "bulletin.jpg"
+  },
+  "data": {
+    "student_name": "JABER EYA",
+    "student_id": "14516283",
+    "subjects": [
+      {
+        "subject": "Recherche Opérationnelle 1",
+        "grade": 11.3,
+        "coefficient": 5.5
+      },
+      {
+        "subject": "Processus Stochastiques",
+        "grade": 10.5,
+        "coefficient": 5.5
+      },
+      {
+        "subject": "Calcul Scientifique",
+        "grade": 10.5,
+        "coefficient": 5.5
+      },
+      {
+        "subject": "Intelligence Artificielle",
+        "grade": 12.5,
+        "coefficient": 5.0
+      },
+      {
+        "subject": "Techniques de traitement d'images",
+        "grade": 12.5,
+        "coefficient": 5.0
+      },
+      {
+        "subject": "Outils numériques pour",
+        "grade": 14.63,
+        "coefficient": 5.0
+      },
+      {
+        "subject": "Stage d'Initiation",
+        "grade": 14.0,
+        "coefficient": 5.0
+      },
+      {
+        "subject": "Résistance des matériaux",
+        "grade": 8.63,
+        "coefficient": 9.5
+      },
+      {
+        "subject": "Transfert thermique",
+        "grade": 10.0,
+        "coefficient": 9.5
+      },
+      {
+        "subject": "Physique des Matériaux",
+        "grade": 10.0,
+        "coefficient": 9.5
+      },
+      {
+        "subject": "Fonctions de l'Electronique",
+        "grade": 7.81,
+        "coefficient": 9.5
+      },
+      {
+        "subject": "Anglais 3",
+        "grade": 15.25,
+        "coefficient": 6.0
+      },
+      {
+        "subject": "Gestion des Projets",
+        "grade": 15.25,
+        "coefficient": 6.0
+      },
+      {
+        "subject": "Management des équipes",
+        "grade": 15.25,
+        "coefficient": 6.0
+      },
+      {
+        "subject": "Langue ALI/JAP",
+        "grade": 19.25,
+        "coefficient": 6.0
+      },
+      {
+        "subject": "Outils numériques pour l'ingénieur 4",
+        "grade": 15.0,
+        "coefficient": 5.5
+      },
+      {
+        "subject": "Modélisation mathématique pour",
+        "grade": 15.0,
+        "coefficient": 5.5
+      },
+      {
+        "subject": "Automate Programmable Industriel",
+        "grade": 10.94,
+        "coefficient": 5.5
+      },
+      {
+        "subject": "Matériaux avancés et nanocomposite",
+        "grade": 12.0,
+        "coefficient": 8.0
+      },
+      {
+        "subject": "Capteurs et instrumentation",
+        "grade": 15.0,
+        "coefficient": 8.0
+      },
+      {
+        "subject": "Electronique pour les systèmes",
+        "grade": 12.0,
+        "coefficient": 8.0
+      },
+      {
+        "subject": "Projet de synthèse 2",
+        "grade": 14.29,
+        "coefficient": 8.0
+      },
+      {
+        "subject": "Anglais 4",
+        "grade": 13.33,
+        "coefficient": 4.5
+      },
+      {
+        "subject": "Culture Entrepreneuriale",
+        "grade": 15.0,
+        "coefficient": 4.5
+      },
+      {
+        "subject": "Langue ALI/JAP",
+        "grade": 15.71,
+        "coefficient": 4.5
+      },
+      {
+        "subject": "Conception des systèmes électroniques",
+        "grade": 10.94,
+        "coefficient": 8.0
+      },
+      {
+        "subject": "Technologies de nano fabrication et",
+        "grade": 10.94,
+        "coefficient": 8.0
+      },
+      {
+        "subject": "Electronique hyperfréquence",
+        "grade": 10.94,
+        "coefficient": 8.0
+      },
+      {
+        "subject": "Fabrication et techniques de carac de",
+        "grade": 10.3,
+        "coefficient": 8.0
+      }
+    ],
+    "average": 12.3,
+    "other_info": {
+      "decision": "ADMISE",
+      "mention": "ASSEZ BIEN"
+    }
+  }
+}
