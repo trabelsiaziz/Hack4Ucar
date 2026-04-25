@@ -1,0 +1,38 @@
+# Environnement
+.env
+.venv
+venv/
+ENV/
+env/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+dist/
+build/
+*.egg-info/
+
+# VS Code
+.vscode/
+.idea/
+
+# Données (trop volumineuses)
+app/services/uploads/
+app/services/generated_pdfs/
+
+# Fichiers temporaires
+*.db
+*.sqlite
+*.log
+.DS_Store
+
+# Node
+node_modules/
+package-lock.json
+
+# Autre
+.DS_Store
+Thumbs.db

@@ -1,0 +1,1190 @@
+{
+  "metadata": {
+    "type": "conference",
+    "institution_id": "isste",
+    "extraction_date": "2026-04-25T21:55:21.742011",
+    "source": "ISSTE_Conference_Scientifique_2025.xlsx"
+  },
+  "data": {
+    "sheets": {
+      "Vue Générale": {
+        "rows": [
+          {
+            "ISSTE — Conférence Scientifique Internationale 2025": "Rapport de Consommation Budgétaire — 15 au 17 Mai 2025 | Borj Cedria",
+            "Unnamed: 1": NaN,
+            "Unnamed: 2": NaN,
+            "Unnamed: 3": NaN,
+            "Unnamed: 4": NaN,
+            "Unnamed: 5": NaN,
+            "Unnamed: 6": NaN,
+            "Unnamed: 7": NaN
+          },
+          {
+            "ISSTE — Conférence Scientifique Internationale 2025": NaN,
+            "Unnamed: 1": NaN,
+            "Unnamed: 2": NaN,
+            "Unnamed: 3": NaN,
+            "Unnamed: 4": NaN,
+            "Unnamed: 5": NaN,
+            "Unnamed: 6": NaN,
+            "Unnamed: 7": NaN
+          },
+          {
+            "ISSTE — Conférence Scientifique Internationale 2025": "INFORMATIONS GÉNÉRALES",
+            "Unnamed: 1": NaN,
+            "Unnamed: 2": NaN,
+            "Unnamed: 3": "RÉSUMÉ PAR CATÉGORIE DE DÉPENSE",
+            "Unnamed: 4": NaN,
+            "Unnamed: 5": NaN,
+            "Unnamed: 6": NaN,
+            "Unnamed: 7": NaN
+          },
+          {
+            "ISSTE — Conférence Scientifique Internationale 2025": "Institution",
+            "Unnamed: 1": "ISSTE — Institut Supérieur des Sciences et Technologies de lEnvironnement",
+            "Unnamed: 2": NaN,
+            "Unnamed: 3": "Catégorie",
+            "Unnamed: 4": "Alloué (TND)",
+            "Unnamed: 5": "Consommé (TND)",
+            "Unnamed: 6": "Écart (TND)",
+            "Unnamed: 7": "Taux exec. %"
+          },
+          {
+            "ISSTE — Conférence Scientifique Internationale 2025": "Adresse",
+            "Unnamed: 1": "Campus Universitaire, Borj Cedria, Ben Arous — Tunisie",
+            "Unnamed: 2": NaN,
+            "Unnamed: 3": "Restauration & Pauses café",
+            "Unnamed: 4": 18500,
+            "Unnamed: 5": 17820,
+            "Unnamed: 6": 680,
+            "Unnamed: 7": 0.963243243243243
+          },
+          {
+            "ISSTE — Conférence Scientifique Internationale 2025": "Dates",
+            "Unnamed: 1": "15, 16 et 17 Mai 2025 (3 jours)",
+            "Unnamed: 2": NaN,
+            "Unnamed: 3": "Hébergement intervenants",
+            "Unnamed: 4": 12000,
+            "Unnamed: 5": 11500,
+            "Unnamed: 6": 500,
+            "Unnamed: 7": 0.958333333333333
+          },
+          {
+            "ISSTE — Conférence Scientifique Internationale 2025": "Participants",
+            "Unnamed: 1": "280 personnes (chercheurs, étudiants, invités, partenaires)",
+            "Unnamed: 2": NaN,
+            "Unnamed: 3": "Matériel & Fournitures",
+            "Unnamed: 4": 8500,
+            "Unnamed: 5": 7950,
+            "Unnamed: 6": 550,
+            "Unnamed: 7": 0.935294117647059
+          },
+          {
+            "ISSTE — Conférence Scientifique Internationale 2025": "Responsable événement",
+            "Unnamed: 1": "Prof. Moez TRABELSI — Directeur ISSTE",
+            "Unnamed: 2": NaN,
+            "Unnamed: 3": "Équipements audiovisuels",
+            "Unnamed: 4": 7200,
+            "Unnamed: 5": 6890,
+            "Unnamed: 6": 310,
+            "Unnamed: 7": 0.956944444444445
+          },
+          {
+            "ISSTE — Conférence Scientifique Internationale 2025": "N° Décision",
+            "Unnamed: 1": "Décision N° 2025/ISSTE/047 du 02/04/2025",
+            "Unnamed: 2": NaN,
+            "Unnamed: 3": "Transport & Logistique",
+            "Unnamed: 4": 6800,
+            "Unnamed: 5": 6200,
+            "Unnamed: 6": 600,
+            "Unnamed: 7": 0.911764705882353
+          },
+          {
+            "ISSTE — Conférence Scientifique Internationale 2025": "Budget alloué (TND)",
+            "Unnamed: 1": "85 000,000",
+            "Unnamed: 2": NaN,
+            "Unnamed: 3": "Impression & Communication",
+            "Unnamed: 4": 4500,
+            "Unnamed: 5": 4150,
+            "Unnamed: 6": 350,
+            "Unnamed: 7": 0.922222222222222
+          },
+          {
+            "ISSTE — Conférence Scientifique Internationale 2025": NaN,
+            "Unnamed: 1": NaN,
+            "Unnamed: 2": NaN,
+            "Unnamed: 3": "Honoraires intervenants",
+            "Unnamed: 4": 15000,
+            "Unnamed: 5": 14000,
+            "Unnamed: 6": 1000,
+            "Unnamed: 7": 0.933333333333333
+          },
+          {
+            "ISSTE — Conférence Scientifique Internationale 2025": NaN,
+            "Unnamed: 1": NaN,
+            "Unnamed: 2": NaN,
+            "Unnamed: 3": "Sécurité & Maintenance",
+            "Unnamed: 4": 3200,
+            "Unnamed: 5": 2980,
+            "Unnamed: 6": 220,
+            "Unnamed: 7": 0.93125
+          },
+          {
+            "ISSTE — Conférence Scientifique Internationale 2025": NaN,
+            "Unnamed: 1": NaN,
+            "Unnamed: 2": NaN,
+            "Unnamed: 3": "Divers & Imprévus",
+            "Unnamed: 4": 9300,
+            "Unnamed: 5": 7600,
+            "Unnamed: 6": 1700,
+            "Unnamed: 7": 0.817204301075269
+          },
+          {
+            "ISSTE — Conférence Scientifique Internationale 2025": NaN,
+            "Unnamed: 1": NaN,
+            "Unnamed: 2": NaN,
+            "Unnamed: 3": "TOTAL GÉNÉRAL",
+            "Unnamed: 4": 85000,
+            "Unnamed: 5": 79090,
+            "Unnamed: 6": 5910,
+            "Unnamed: 7": 0.930470588235294
+          }
+        ],
+        "columns": [
+          "ISSTE — Conférence Scientifique Internationale 2025",
+          "Unnamed: 1",
+          "Unnamed: 2",
+          "Unnamed: 3",
+          "Unnamed: 4",
+          "Unnamed: 5",
+          "Unnamed: 6",
+          "Unnamed: 7"
+        ],
+        "shape": [
+          14,
+          8
+        ]
+      },
+      "Restauration": {
+        "rows": [
+          {
+            "RESTAURATION & PAUSES CAFÉ — Conférence ISSTE 2025": "Date",
+            "Unnamed: 1": "Prestation",
+            "Unnamed: 2": "Fournisseur",
+            "Unnamed: 3": "Nbre couverts",
+            "Unnamed: 4": "Prix unit. (TND)",
+            "Unnamed: 5": "Montant HT (TND)",
+            "Unnamed: 6": "TVA 19%",
+            "Unnamed: 7": "TTC (TND)",
+            "Unnamed: 8": "Statut"
+          },
+          {
+            "RESTAURATION & PAUSES CAFÉ — Conférence ISSTE 2025": "15/05/2025",
+            "Unnamed: 1": "Pause café matin J1",
+            "Unnamed: 2": "Café El Medina, Borj Cedria",
+            "Unnamed: 3": 80,
+            "Unnamed: 4": 4.5,
+            "Unnamed: 5": 360,
+            "Unnamed: 6": 68.4,
+            "Unnamed: 7": 428.4,
+            "Unnamed: 8": "Payé"
+          },
+          {
+            "RESTAURATION & PAUSES CAFÉ — Conférence ISSTE 2025": "15/05/2025",
+            "Unnamed: 1": "Déjeuner buffet J1",
+            "Unnamed: 2": "Restaurant Univ. ISSTE",
+            "Unnamed: 3": 280,
+            "Unnamed: 4": 18,
+            "Unnamed: 5": 5040,
+            "Unnamed: 6": 957.6,
+            "Unnamed: 7": 5997.6,
+            "Unnamed: 8": "Payé"
+          },
+          {
+            "RESTAURATION & PAUSES CAFÉ — Conférence ISSTE 2025": "15/05/2025",
+            "Unnamed: 1": "Pause café après-midi J1",
+            "Unnamed: 2": "Café El Medina, Borj Cedria",
+            "Unnamed: 3": 80,
+            "Unnamed: 4": 4.5,
+            "Unnamed: 5": 360,
+            "Unnamed: 6": 68.4,
+            "Unnamed: 7": 428.4,
+            "Unnamed: 8": "Payé"
+          },
+          {
+            "RESTAURATION & PAUSES CAFÉ — Conférence ISSTE 2025": "15/05/2025",
+            "Unnamed: 1": "Dîner de gala intervenants",
+            "Unnamed: 2": "Hôtel Dar Zarrouk, Sidi Bou Saïd",
+            "Unnamed: 3": 45,
+            "Unnamed: 4": 85,
+            "Unnamed: 5": 3825,
+            "Unnamed: 6": 726.75,
+            "Unnamed: 7": 4551.75,
+            "Unnamed: 8": "Payé"
+          },
+          {
+            "RESTAURATION & PAUSES CAFÉ — Conférence ISSTE 2025": "16/05/2025",
+            "Unnamed: 1": "Pause café matin J2",
+            "Unnamed: 2": "Café El Medina, Borj Cedria",
+            "Unnamed: 3": 95,
+            "Unnamed: 4": 4.5,
+            "Unnamed: 5": 427.5,
+            "Unnamed: 6": 81.225,
+            "Unnamed: 7": 508.725,
+            "Unnamed: 8": "Payé"
+          },
+          {
+            "RESTAURATION & PAUSES CAFÉ — Conférence ISSTE 2025": "16/05/2025",
+            "Unnamed: 1": "Déjeuner buffet J2",
+            "Unnamed: 2": "Restaurant Univ. ISSTE",
+            "Unnamed: 3": 280,
+            "Unnamed: 4": 18,
+            "Unnamed: 5": 5040,
+            "Unnamed: 6": 957.6,
+            "Unnamed: 7": 5997.6,
+            "Unnamed: 8": "Payé"
+          },
+          {
+            "RESTAURATION & PAUSES CAFÉ — Conférence ISSTE 2025": "16/05/2025",
+            "Unnamed: 1": "Pause café après-midi J2",
+            "Unnamed: 2": "Café El Medina, Borj Cedria",
+            "Unnamed: 3": 95,
+            "Unnamed: 4": 4.5,
+            "Unnamed: 5": 427.5,
+            "Unnamed: 6": 81.225,
+            "Unnamed: 7": 508.725,
+            "Unnamed: 8": "Payé"
+          },
+          {
+            "RESTAURATION & PAUSES CAFÉ — Conférence ISSTE 2025": "16/05/2025",
+            "Unnamed: 1": "Cocktail networking",
+            "Unnamed: 2": "Traiteur El Marsa Events",
+            "Unnamed: 3": 120,
+            "Unnamed: 4": 22,
+            "Unnamed: 5": 2640,
+            "Unnamed: 6": 501.6,
+            "Unnamed: 7": 3141.6,
+            "Unnamed: 8": "Payé"
+          },
+          {
+            "RESTAURATION & PAUSES CAFÉ — Conférence ISSTE 2025": "17/05/2025",
+            "Unnamed: 1": "Pause café matin J3",
+            "Unnamed: 2": "Café El Medina, Borj Cedria",
+            "Unnamed: 3": 70,
+            "Unnamed: 4": 4.5,
+            "Unnamed: 5": 315,
+            "Unnamed: 6": 59.85,
+            "Unnamed: 7": 374.85,
+            "Unnamed: 8": "En attente"
+          },
+          {
+            "RESTAURATION & PAUSES CAFÉ — Conférence ISSTE 2025": "17/05/2025",
+            "Unnamed: 1": "Déjeuner clôture J3",
+            "Unnamed: 2": "Restaurant Univ. ISSTE",
+            "Unnamed: 3": 250,
+            "Unnamed: 4": 18,
+            "Unnamed: 5": 4500,
+            "Unnamed: 6": 855,
+            "Unnamed: 7": 5355,
+            "Unnamed: 8": "En attente"
+          },
+          {
+            "RESTAURATION & PAUSES CAFÉ — Conférence ISSTE 2025": "17/05/2025",
+            "Unnamed: 1": "Pause café après-midi J3",
+            "Unnamed: 2": "Café El Medina, Borj Cedria",
+            "Unnamed: 3": 60,
+            "Unnamed: 4": 4.5,
+            "Unnamed: 5": 270,
+            "Unnamed: 6": 51.3,
+            "Unnamed: 7": 321.3,
+            "Unnamed: 8": "En attente"
+          },
+          {
+            "RESTAURATION & PAUSES CAFÉ — Conférence ISSTE 2025": "15-17/05",
+            "Unnamed: 1": "Eau minérale & boissons",
+            "Unnamed: 2": "Société SEAB Tunisie",
+            "Unnamed: 3": 1,
+            "Unnamed: 4": 850,
+            "Unnamed: 5": 850,
+            "Unnamed: 6": 161.5,
+            "Unnamed: 7": 1011.5,
+            "Unnamed: 8": "En attente"
+          },
+          {
+            "RESTAURATION & PAUSES CAFÉ — Conférence ISSTE 2025": NaN,
+            "Unnamed: 1": "TOTAL",
+            "Unnamed: 2": NaN,
+            "Unnamed: 3": NaN,
+            "Unnamed: 4": NaN,
+            "Unnamed: 5": 24055,
+            "Unnamed: 6": 4570.45,
+            "Unnamed: 7": 28625.45,
+            "Unnamed: 8": NaN
+          }
+        ],
+        "columns": [
+          "RESTAURATION & PAUSES CAFÉ — Conférence ISSTE 2025",
+          "Unnamed: 1",
+          "Unnamed: 2",
+          "Unnamed: 3",
+          "Unnamed: 4",
+          "Unnamed: 5",
+          "Unnamed: 6",
+          "Unnamed: 7",
+          "Unnamed: 8"
+        ],
+        "shape": [
+          14,
+          9
+        ]
+      },
+      "Hébergement": {
+        "rows": [
+          {
+            "HÉBERGEMENT INTERVENANTS — Conférence ISSTE 2025": "Nom & Prénom",
+            "Unnamed: 1": "Institution / Pays",
+            "Unnamed: 2": "Type chambre",
+            "Unnamed: 3": "Hôtel",
+            "Unnamed: 4": "Nuits",
+            "Unnamed: 5": "Prix/nuit (TND)",
+            "Unnamed: 6": "Total (TND)",
+            "Unnamed: 7": "Arrivée",
+            "Unnamed: 8": "Départ",
+            "Unnamed: 9": "Statut"
+          },
+          {
+            "HÉBERGEMENT INTERVENANTS — Conférence ISSTE 2025": "Prof. Ahmed MANSOURI",
+            "Unnamed: 1": "Univ. de Tunis / Tunisie",
+            "Unnamed: 2": "Double Standard",
+            "Unnamed: 3": "Hôtel Dar Zarrouk",
+            "Unnamed: 4": 3,
+            "Unnamed: 5": 180,
+            "Unnamed: 6": 540,
+            "Unnamed: 7": "14/05",
+            "Unnamed: 8": "17/05",
+            "Unnamed: 9": "Confirmé"
+          },
+          {
+            "HÉBERGEMENT INTERVENANTS — Conférence ISSTE 2025": "Dr. Marie LECLERC",
+            "Unnamed: 1": "Univ. Paris-Saclay / France",
+            "Unnamed: 2": "Single Superior",
+            "Unnamed: 3": "Hôtel Dar Zarrouk",
+            "Unnamed: 4": 3,
+            "Unnamed: 5": 220,
+            "Unnamed: 6": 660,
+            "Unnamed: 7": "15/05",
+            "Unnamed: 8": "18/05",
+            "Unnamed: 9": "Confirmé"
+          },
+          {
+            "HÉBERGEMENT INTERVENANTS — Conférence ISSTE 2025": "Prof. Karim BENCHEIKH",
+            "Unnamed: 1": "Univ. Mohammed V / Maroc",
+            "Unnamed: 2": "Double Standard",
+            "Unnamed: 3": "Hôtel Dar Zarrouk",
+            "Unnamed: 4": 2,
+            "Unnamed: 5": 180,
+            "Unnamed: 6": 360,
+            "Unnamed: 7": "15/05",
+            "Unnamed: 8": "17/05",
+            "Unnamed: 9": "Confirmé"
+          },
+          {
+            "HÉBERGEMENT INTERVENANTS — Conférence ISSTE 2025": "Dr. Lena SCHMIDT",
+            "Unnamed: 1": "TU Berlin / Allemagne",
+            "Unnamed: 2": "Single Superior",
+            "Unnamed: 3": "Hôtel Carthage Thalasso",
+            "Unnamed: 4": 3,
+            "Unnamed: 5": 250,
+            "Unnamed: 6": 750,
+            "Unnamed: 7": "14/05",
+            "Unnamed: 8": "17/05",
+            "Unnamed: 9": "Confirmé"
+          },
+          {
+            "HÉBERGEMENT INTERVENANTS — Conférence ISSTE 2025": "Prof. Sami OUESLATI",
+            "Unnamed: 1": "ENIS Sfax / Tunisie",
+            "Unnamed: 2": "Single Standard",
+            "Unnamed: 3": "Résidence ISSTE",
+            "Unnamed: 4": 2,
+            "Unnamed: 5": 85,
+            "Unnamed: 6": 170,
+            "Unnamed: 7": "15/05",
+            "Unnamed: 8": "17/05",
+            "Unnamed: 9": "Confirmé"
+          },
+          {
+            "HÉBERGEMENT INTERVENANTS — Conférence ISSTE 2025": "Dr. Fatima Z. IDRISSI",
+            "Unnamed: 1": "Univ. Mohammed VI / Maroc",
+            "Unnamed: 2": "Single Superior",
+            "Unnamed: 3": "Hôtel Dar Zarrouk",
+            "Unnamed: 4": 3,
+            "Unnamed: 5": 220,
+            "Unnamed: 6": 660,
+            "Unnamed: 7": "15/05",
+            "Unnamed: 8": "18/05",
+            "Unnamed: 9": "Confirmé"
+          },
+          {
+            "HÉBERGEMENT INTERVENANTS — Conférence ISSTE 2025": "Prof. John MATTHEWS",
+            "Unnamed: 1": "MIT / États-Unis",
+            "Unnamed: 2": "Suite Junior",
+            "Unnamed: 3": "Hôtel Carthage Thalasso",
+            "Unnamed: 4": 4,
+            "Unnamed: 5": 350,
+            "Unnamed: 6": 1400,
+            "Unnamed: 7": "14/05",
+            "Unnamed: 8": "18/05",
+            "Unnamed: 9": "Confirmé"
+          },
+          {
+            "HÉBERGEMENT INTERVENANTS — Conférence ISSTE 2025": "Dr. Aisha AL-RASHIDI",
+            "Unnamed: 1": "Univ. King Saud / Arabie S.",
+            "Unnamed: 2": "Single Superior",
+            "Unnamed: 3": "Hôtel Dar Zarrouk",
+            "Unnamed: 4": 3,
+            "Unnamed: 5": 220,
+            "Unnamed: 6": 660,
+            "Unnamed: 7": "15/05",
+            "Unnamed: 8": "18/05",
+            "Unnamed: 9": "En attente"
+          },
+          {
+            "HÉBERGEMENT INTERVENANTS — Conférence ISSTE 2025": "Dr. Liu ZHANG",
+            "Unnamed: 1": "Tsinghua Univ. / Chine",
+            "Unnamed: 2": "Double Standard",
+            "Unnamed: 3": "Hôtel Carthage Thalasso",
+            "Unnamed: 4": 3,
+            "Unnamed: 5": 250,
+            "Unnamed: 6": 750,
+            "Unnamed: 7": "15/05",
+            "Unnamed: 8": "18/05",
+            "Unnamed: 9": "Confirmé"
+          },
+          {
+            "HÉBERGEMENT INTERVENANTS — Conférence ISSTE 2025": "Prof. Monia GHARBI",
+            "Unnamed: 1": "ENIG Gabès / Tunisie",
+            "Unnamed: 2": "Single Standard",
+            "Unnamed: 3": "Résidence ISSTE",
+            "Unnamed: 4": 2,
+            "Unnamed: 5": 85,
+            "Unnamed: 6": 170,
+            "Unnamed: 7": "15/05",
+            "Unnamed: 8": "17/05",
+            "Unnamed: 9": "Confirmé"
+          },
+          {
+            "HÉBERGEMENT INTERVENANTS — Conférence ISSTE 2025": "TOTAL HÉBERGEMENT",
+            "Unnamed: 1": NaN,
+            "Unnamed: 2": NaN,
+            "Unnamed: 3": NaN,
+            "Unnamed: 4": NaN,
+            "Unnamed: 5": NaN,
+            "Unnamed: 6": 6120,
+            "Unnamed: 7": NaN,
+            "Unnamed: 8": NaN,
+            "Unnamed: 9": NaN
+          }
+        ],
+        "columns": [
+          "HÉBERGEMENT INTERVENANTS — Conférence ISSTE 2025",
+          "Unnamed: 1",
+          "Unnamed: 2",
+          "Unnamed: 3",
+          "Unnamed: 4",
+          "Unnamed: 5",
+          "Unnamed: 6",
+          "Unnamed: 7",
+          "Unnamed: 8",
+          "Unnamed: 9"
+        ],
+        "shape": [
+          12,
+          10
+        ]
+      },
+      "Matériel & Fournitures": {
+        "rows": [
+          {
+            "MATÉRIEL, FOURNITURES & ÉQUIPEMENTS AV — Conférence ISSTE 2025": "Désignation",
+            "Unnamed: 1": "Catégorie",
+            "Unnamed: 2": "Fournisseur",
+            "Unnamed: 3": "Qté",
+            "Unnamed: 4": "Unité",
+            "Unnamed: 5": "Prix unit. (TND)",
+            "Unnamed: 6": "Total (TND)",
+            "Unnamed: 7": "Bon commande"
+          },
+          {
+            "MATÉRIEL, FOURNITURES & ÉQUIPEMENTS AV — Conférence ISSTE 2025": "Stylos bille bleus",
+            "Unnamed: 1": "Papeterie",
+            "Unnamed: 2": "Librairie El Moez Tunis",
+            "Unnamed: 3": 300,
+            "Unnamed: 4": "pcs",
+            "Unnamed: 5": 0.8,
+            "Unnamed: 6": 240,
+            "Unnamed: 7": "BC-001"
+          },
+          {
+            "MATÉRIEL, FOURNITURES & ÉQUIPEMENTS AV — Conférence ISSTE 2025": "Blocs-notes A5",
+            "Unnamed: 1": "Papeterie",
+            "Unnamed: 2": "Librairie El Moez Tunis",
+            "Unnamed: 3": 300,
+            "Unnamed: 4": "pcs",
+            "Unnamed: 5": 2.5,
+            "Unnamed: 6": 750,
+            "Unnamed: 7": "BC-001"
+          },
+          {
+            "MATÉRIEL, FOURNITURES & ÉQUIPEMENTS AV — Conférence ISSTE 2025": "Chemises cartonnées",
+            "Unnamed: 1": "Papeterie",
+            "Unnamed: 2": "Librairie El Moez Tunis",
+            "Unnamed: 3": 300,
+            "Unnamed: 4": "pcs",
+            "Unnamed: 5": 1.2,
+            "Unnamed: 6": 360,
+            "Unnamed: 7": "BC-001"
+          },
+          {
+            "MATÉRIEL, FOURNITURES & ÉQUIPEMENTS AV — Conférence ISSTE 2025": "Badges nominatifs plastifiés",
+            "Unnamed: 1": "Identification",
+            "Unnamed: 2": "Imprimerie Rapide Tunis",
+            "Unnamed: 3": 300,
+            "Unnamed: 4": "pcs",
+            "Unnamed: 5": 1.8,
+            "Unnamed: 6": 540,
+            "Unnamed: 7": "BC-002"
+          },
+          {
+            "MATÉRIEL, FOURNITURES & ÉQUIPEMENTS AV — Conférence ISSTE 2025": "Cordons badges",
+            "Unnamed: 1": "Identification",
+            "Unnamed: 2": "Imprimerie Rapide Tunis",
+            "Unnamed: 3": 300,
+            "Unnamed: 4": "pcs",
+            "Unnamed: 5": 0.5,
+            "Unnamed: 6": 150,
+            "Unnamed: 7": "BC-002"
+          },
+          {
+            "MATÉRIEL, FOURNITURES & ÉQUIPEMENTS AV — Conférence ISSTE 2025": "Programme imprimé A5",
+            "Unnamed: 1": "Impression",
+            "Unnamed: 2": "Imprimerie Rapide Tunis",
+            "Unnamed: 3": 300,
+            "Unnamed: 4": "pcs",
+            "Unnamed: 5": 2.2,
+            "Unnamed: 6": 660,
+            "Unnamed: 7": "BC-002"
+          },
+          {
+            "MATÉRIEL, FOURNITURES & ÉQUIPEMENTS AV — Conférence ISSTE 2025": "Bannières roll-up 85x200cm",
+            "Unnamed: 1": "Signalétique",
+            "Unnamed: 2": "Publicitaire Medina",
+            "Unnamed: 3": 8,
+            "Unnamed: 4": "pcs",
+            "Unnamed: 5": 180,
+            "Unnamed: 6": 1440,
+            "Unnamed: 7": "BC-003"
+          },
+          {
+            "MATÉRIEL, FOURNITURES & ÉQUIPEMENTS AV — Conférence ISSTE 2025": "Banderoles extérieur 5m",
+            "Unnamed: 1": "Signalétique",
+            "Unnamed: 2": "Publicitaire Medina",
+            "Unnamed: 3": 4,
+            "Unnamed: 4": "pcs",
+            "Unnamed: 5": 120,
+            "Unnamed: 6": 480,
+            "Unnamed: 7": "BC-003"
+          },
+          {
+            "MATÉRIEL, FOURNITURES & ÉQUIPEMENTS AV — Conférence ISSTE 2025": "Affiches A0 programme",
+            "Unnamed: 1": "Impression",
+            "Unnamed: 2": "Imprimerie Rapide Tunis",
+            "Unnamed: 3": 20,
+            "Unnamed: 4": "pcs",
+            "Unnamed: 5": 22,
+            "Unnamed: 6": 440,
+            "Unnamed: 7": "BC-002"
+          },
+          {
+            "MATÉRIEL, FOURNITURES & ÉQUIPEMENTS AV — Conférence ISSTE 2025": "Pochettes conférence",
+            "Unnamed: 1": "Kit participant",
+            "Unnamed: 2": "Imprimerie Rapide Tunis",
+            "Unnamed: 3": 300,
+            "Unnamed: 4": "pcs",
+            "Unnamed: 5": 3.5,
+            "Unnamed: 6": 1050,
+            "Unnamed: 7": "BC-002"
+          },
+          {
+            "MATÉRIEL, FOURNITURES & ÉQUIPEMENTS AV — Conférence ISSTE 2025": "Toners imprimante HP",
+            "Unnamed: 1": "Informatique",
+            "Unnamed: 2": "Informatique Plus Ariana",
+            "Unnamed: 3": 4,
+            "Unnamed: 4": "pcs",
+            "Unnamed: 5": 85,
+            "Unnamed: 6": 340,
+            "Unnamed: 7": "BC-004"
+          },
+          {
+            "MATÉRIEL, FOURNITURES & ÉQUIPEMENTS AV — Conférence ISSTE 2025": "Ramettes papier A4 80g",
+            "Unnamed: 1": "Papeterie",
+            "Unnamed: 2": "Librairie El Moez Tunis",
+            "Unnamed: 3": 20,
+            "Unnamed: 4": "ram",
+            "Unnamed: 5": 14,
+            "Unnamed: 6": 280,
+            "Unnamed: 7": "BC-001"
+          },
+          {
+            "MATÉRIEL, FOURNITURES & ÉQUIPEMENTS AV — Conférence ISSTE 2025": "Câbles HDMI 5m",
+            "Unnamed: 1": "AV",
+            "Unnamed: 2": "Électronique Plus Tunis",
+            "Unnamed: 3": 6,
+            "Unnamed: 4": "pcs",
+            "Unnamed: 5": 28,
+            "Unnamed: 6": 168,
+            "Unnamed: 7": "BC-005"
+          },
+          {
+            "MATÉRIEL, FOURNITURES & ÉQUIPEMENTS AV — Conférence ISSTE 2025": "Pointeurs laser",
+            "Unnamed: 1": "AV",
+            "Unnamed: 2": "Électronique Plus Tunis",
+            "Unnamed: 3": 4,
+            "Unnamed: 4": "pcs",
+            "Unnamed: 5": 35,
+            "Unnamed: 6": 140,
+            "Unnamed: 7": "BC-005"
+          },
+          {
+            "MATÉRIEL, FOURNITURES & ÉQUIPEMENTS AV — Conférence ISSTE 2025": "Microphones sans fil HF",
+            "Unnamed: 1": "AV",
+            "Unnamed: 2": "Son & Image Pro",
+            "Unnamed: 3": 4,
+            "Unnamed: 4": "pcs",
+            "Unnamed: 5": 350,
+            "Unnamed: 6": 1400,
+            "Unnamed: 7": "BC-006"
+          },
+          {
+            "MATÉRIEL, FOURNITURES & ÉQUIPEMENTS AV — Conférence ISSTE 2025": "Écran projection 200x200cm",
+            "Unnamed: 1": "AV",
+            "Unnamed: 2": "Son & Image Pro",
+            "Unnamed: 3": 2,
+            "Unnamed: 4": "pcs",
+            "Unnamed: 5": 450,
+            "Unnamed: 6": 900,
+            "Unnamed: 7": "BC-006"
+          },
+          {
+            "MATÉRIEL, FOURNITURES & ÉQUIPEMENTS AV — Conférence ISSTE 2025": "Vidéoprojecteur Full HD",
+            "Unnamed: 1": "AV",
+            "Unnamed: 2": "Son & Image Pro",
+            "Unnamed: 3": 3,
+            "Unnamed: 4": "pcs",
+            "Unnamed: 5": 980,
+            "Unnamed: 6": 2940,
+            "Unnamed: 7": "BC-006"
+          },
+          {
+            "MATÉRIEL, FOURNITURES & ÉQUIPEMENTS AV — Conférence ISSTE 2025": "Bouteilles eau 1.5L (caisse)",
+            "Unnamed: 1": "Logistique",
+            "Unnamed: 2": "SEAB Tunisie",
+            "Unnamed: 3": 50,
+            "Unnamed: 4": "caisse",
+            "Unnamed: 5": 22,
+            "Unnamed: 6": 1100,
+            "Unnamed: 7": "BC-007"
+          },
+          {
+            "MATÉRIEL, FOURNITURES & ÉQUIPEMENTS AV — Conférence ISSTE 2025": "Nappes tables conférence",
+            "Unnamed: 1": "Logistique",
+            "Unnamed: 2": "Maisonnette Déco",
+            "Unnamed: 3": 30,
+            "Unnamed: 4": "pcs",
+            "Unnamed: 5": 18,
+            "Unnamed: 6": 540,
+            "Unnamed: 7": "BC-008"
+          },
+          {
+            "MATÉRIEL, FOURNITURES & ÉQUIPEMENTS AV — Conférence ISSTE 2025": "Fleurs & plantes décoration",
+            "Unnamed: 1": "Décoration",
+            "Unnamed: 2": "Fleuriste El Marsa",
+            "Unnamed: 3": 1,
+            "Unnamed: 4": "forfait",
+            "Unnamed: 5": 580,
+            "Unnamed: 6": 580,
+            "Unnamed: 7": "BC-009"
+          },
+          {
+            "MATÉRIEL, FOURNITURES & ÉQUIPEMENTS AV — Conférence ISSTE 2025": "TOTAL MATÉRIEL",
+            "Unnamed: 1": NaN,
+            "Unnamed: 2": NaN,
+            "Unnamed: 3": NaN,
+            "Unnamed: 4": NaN,
+            "Unnamed: 5": NaN,
+            "Unnamed: 6": 14498,
+            "Unnamed: 7": NaN
+          }
+        ],
+        "columns": [
+          "MATÉRIEL, FOURNITURES & ÉQUIPEMENTS AV — Conférence ISSTE 2025",
+          "Unnamed: 1",
+          "Unnamed: 2",
+          "Unnamed: 3",
+          "Unnamed: 4",
+          "Unnamed: 5",
+          "Unnamed: 6",
+          "Unnamed: 7"
+        ],
+        "shape": [
+          22,
+          8
+        ]
+      },
+      "Transport & Logistique": {
+        "rows": [
+          {
+            "TRANSPORT & LOGISTIQUE — Conférence ISSTE 2025": "Date",
+            "Unnamed: 1": "Description",
+            "Unnamed: 2": "Prestataire",
+            "Unnamed: 3": "Véhicule",
+            "Unnamed: 4": "Nb trajets",
+            "Unnamed: 5": "Montant (TND)",
+            "Unnamed: 6": "Bénéficiaires",
+            "Unnamed: 7": "N° Bon"
+          },
+          {
+            "TRANSPORT & LOGISTIQUE — Conférence ISSTE 2025": "14/05/2025",
+            "Unnamed: 1": "Navette aéroport → ISSTE",
+            "Unnamed: 2": "Transport Univ. ISSTE",
+            "Unnamed: 3": "Minibus 15pl",
+            "Unnamed: 4": 4,
+            "Unnamed: 5": 320,
+            "Unnamed: 6": "Intervenants internationaux (arrivées)",
+            "Unnamed: 7": "BT-001"
+          },
+          {
+            "TRANSPORT & LOGISTIQUE — Conférence ISSTE 2025": "14/05/2025",
+            "Unnamed: 1": "VTC intervenants VIP",
+            "Unnamed: 2": "Taxi Confort Tunis",
+            "Unnamed: 3": "Berline premium",
+            "Unnamed: 4": 3,
+            "Unnamed: 5": 180,
+            "Unnamed: 6": "Prof. Matthews, Dr. Schmidt, Prof. Mansouri",
+            "Unnamed: 7": "BT-002"
+          },
+          {
+            "TRANSPORT & LOGISTIQUE — Conférence ISSTE 2025": "15/05/2025",
+            "Unnamed: 1": "Navette hôtels → ISSTE matin J1",
+            "Unnamed: 2": "Transport Univ. ISSTE",
+            "Unnamed: 3": "Minibus 15pl",
+            "Unnamed: 4": 3,
+            "Unnamed: 5": 240,
+            "Unnamed: 6": "Intervenants & participants distants",
+            "Unnamed: 7": "BT-003"
+          },
+          {
+            "TRANSPORT & LOGISTIQUE — Conférence ISSTE 2025": "15/05/2025",
+            "Unnamed: 1": "Navette ISSTE → hôtels soir J1",
+            "Unnamed: 2": "Transport Univ. ISSTE",
+            "Unnamed: 3": "Minibus 15pl",
+            "Unnamed: 4": 3,
+            "Unnamed: 5": 240,
+            "Unnamed: 6": "Intervenants & participants distants",
+            "Unnamed: 7": "BT-004"
+          },
+          {
+            "TRANSPORT & LOGISTIQUE — Conférence ISSTE 2025": "15/05/2025",
+            "Unnamed: 1": "Transfert dîner gala → Sidi Bou Saïd",
+            "Unnamed: 2": "Transport Univ. ISSTE",
+            "Unnamed: 3": "Bus 30pl",
+            "Unnamed: 4": 2,
+            "Unnamed: 5": 280,
+            "Unnamed: 6": "Tous intervenants (45 pers.)",
+            "Unnamed: 7": "BT-005"
+          },
+          {
+            "TRANSPORT & LOGISTIQUE — Conférence ISSTE 2025": "16/05/2025",
+            "Unnamed: 1": "Navette hôtels → ISSTE matin J2",
+            "Unnamed: 2": "Transport Univ. ISSTE",
+            "Unnamed: 3": "Minibus 15pl",
+            "Unnamed: 4": 3,
+            "Unnamed: 5": 240,
+            "Unnamed: 6": "Intervenants & participants distants",
+            "Unnamed: 7": "BT-006"
+          },
+          {
+            "TRANSPORT & LOGISTIQUE — Conférence ISSTE 2025": "16/05/2025",
+            "Unnamed: 1": "Navette ISSTE → hôtels soir J2",
+            "Unnamed: 2": "Transport Univ. ISSTE",
+            "Unnamed: 3": "Minibus 15pl",
+            "Unnamed: 4": 3,
+            "Unnamed: 5": 240,
+            "Unnamed: 6": "Intervenants & participants distants",
+            "Unnamed: 7": "BT-007"
+          },
+          {
+            "TRANSPORT & LOGISTIQUE — Conférence ISSTE 2025": "17/05/2025",
+            "Unnamed: 1": "Navette hôtels → ISSTE matin J3",
+            "Unnamed: 2": "Transport Univ. ISSTE",
+            "Unnamed: 3": "Minibus 15pl",
+            "Unnamed: 4": 2,
+            "Unnamed: 5": 160,
+            "Unnamed: 6": "Intervenants & participants distants",
+            "Unnamed: 7": "BT-008"
+          },
+          {
+            "TRANSPORT & LOGISTIQUE — Conférence ISSTE 2025": "17/05/2025",
+            "Unnamed: 1": "Navette ISSTE → aéroport (départs)",
+            "Unnamed: 2": "Transport Univ. ISSTE",
+            "Unnamed: 3": "Minibus 15pl",
+            "Unnamed: 4": 5,
+            "Unnamed: 5": 400,
+            "Unnamed: 6": "Intervenants internationaux (départs)",
+            "Unnamed: 7": "BT-009"
+          },
+          {
+            "TRANSPORT & LOGISTIQUE — Conférence ISSTE 2025": "17/05/2025",
+            "Unnamed: 1": "Location camionnette matériel",
+            "Unnamed: 2": "Location Véhicules Ben Arous",
+            "Unnamed: 3": "Camionnette 3T",
+            "Unnamed: 4": 1,
+            "Unnamed: 5": 350,
+            "Unnamed: 6": "Transport matériel et équipements AV",
+            "Unnamed: 7": "BT-010"
+          },
+          {
+            "TRANSPORT & LOGISTIQUE — Conférence ISSTE 2025": "15-17/05",
+            "Unnamed: 1": "Carburant véhicule de service",
+            "Unnamed: 2": "Station Total Borj Cedria",
+            "Unnamed: 3": "Véhicule institutionnel",
+            "Unnamed: 4": 1,
+            "Unnamed: 5": 180,
+            "Unnamed: 6": "Courses et imprévus logistiques",
+            "Unnamed: 7": "BT-011"
+          },
+          {
+            "TRANSPORT & LOGISTIQUE — Conférence ISSTE 2025": "15-17/05",
+            "Unnamed: 1": "Parking participants (forfait 3j)",
+            "Unnamed: 2": "Parking Municipal Borj Cedria",
+            "Unnamed: 3": "—",
+            "Unnamed: 4": 1,
+            "Unnamed: 5": 150,
+            "Unnamed: 6": "Participants avec véhicule personnel",
+            "Unnamed: 7": "BT-012"
+          },
+          {
+            "TRANSPORT & LOGISTIQUE — Conférence ISSTE 2025": "TOTAL TRANSPORT",
+            "Unnamed: 1": NaN,
+            "Unnamed: 2": NaN,
+            "Unnamed: 3": NaN,
+            "Unnamed: 4": NaN,
+            "Unnamed: 5": 2980,
+            "Unnamed: 6": NaN,
+            "Unnamed: 7": NaN
+          }
+        ],
+        "columns": [
+          "TRANSPORT & LOGISTIQUE — Conférence ISSTE 2025",
+          "Unnamed: 1",
+          "Unnamed: 2",
+          "Unnamed: 3",
+          "Unnamed: 4",
+          "Unnamed: 5",
+          "Unnamed: 6",
+          "Unnamed: 7"
+        ],
+        "shape": [
+          14,
+          8
+        ]
+      },
+      "Honoraires": {
+        "rows": [
+          {
+            "HONORAIRES INTERVENANTS & KEYNOTE SPEAKERS — Conférence ISSTE 2025": "Nom & Prénom",
+            "Unnamed: 1": "Titre",
+            "Unnamed: 2": "Institution",
+            "Unnamed: 3": "Pays",
+            "Unnamed: 4": "Type intervention",
+            "Unnamed: 5": "Durée (h)",
+            "Unnamed: 6": "Honoraires bruts (TND)",
+            "Unnamed: 7": "Retenue 15% (TND)",
+            "Unnamed: 8": "Net à payer (TND)"
+          },
+          {
+            "HONORAIRES INTERVENANTS & KEYNOTE SPEAKERS — Conférence ISSTE 2025": "Prof. John MATTHEWS",
+            "Unnamed: 1": "Professeur",
+            "Unnamed: 2": "MIT",
+            "Unnamed: 3": "USA",
+            "Unnamed: 4": "Keynote principal",
+            "Unnamed: 5": 2,
+            "Unnamed: 6": 4500,
+            "Unnamed: 7": 675,
+            "Unnamed: 8": 3825
+          },
+          {
+            "HONORAIRES INTERVENANTS & KEYNOTE SPEAKERS — Conférence ISSTE 2025": "Prof. Ahmed MANSOURI",
+            "Unnamed: 1": "Professeur",
+            "Unnamed: 2": "Univ. de Tunis",
+            "Unnamed: 3": "Tunisie",
+            "Unnamed: 4": "Keynote speaker",
+            "Unnamed: 5": 1.5,
+            "Unnamed: 6": 1200,
+            "Unnamed: 7": 180,
+            "Unnamed: 8": 1020
+          },
+          {
+            "HONORAIRES INTERVENANTS & KEYNOTE SPEAKERS — Conférence ISSTE 2025": "Dr. Marie LECLERC",
+            "Unnamed: 1": "MCF",
+            "Unnamed: 2": "Univ. Paris-Saclay",
+            "Unnamed: 3": "France",
+            "Unnamed: 4": "Conférence plénière",
+            "Unnamed: 5": 1.5,
+            "Unnamed: 6": 1800,
+            "Unnamed: 7": 270,
+            "Unnamed: 8": 1530
+          },
+          {
+            "HONORAIRES INTERVENANTS & KEYNOTE SPEAKERS — Conférence ISSTE 2025": "Prof. Karim BENCHEIKH",
+            "Unnamed: 1": "Professeur",
+            "Unnamed: 2": "Univ. Mohammed V",
+            "Unnamed: 3": "Maroc",
+            "Unnamed: 4": "Conférence plénière",
+            "Unnamed: 5": 1.5,
+            "Unnamed: 6": 1200,
+            "Unnamed: 7": 180,
+            "Unnamed: 8": 1020
+          },
+          {
+            "HONORAIRES INTERVENANTS & KEYNOTE SPEAKERS — Conférence ISSTE 2025": "Dr. Lena SCHMIDT",
+            "Unnamed: 1": "Dr.-Ing.",
+            "Unnamed: 2": "TU Berlin",
+            "Unnamed: 3": "Allemagne",
+            "Unnamed: 4": "Présentation scientifique",
+            "Unnamed: 5": 1,
+            "Unnamed: 6": 1500,
+            "Unnamed: 7": 225,
+            "Unnamed: 8": 1275
+          },
+          {
+            "HONORAIRES INTERVENANTS & KEYNOTE SPEAKERS — Conférence ISSTE 2025": "Prof. Sami OUESLATI",
+            "Unnamed: 1": "Professeur",
+            "Unnamed: 2": "ENIS Sfax",
+            "Unnamed: 3": "Tunisie",
+            "Unnamed: 4": "Animateur atelier",
+            "Unnamed: 5": 3,
+            "Unnamed: 6": 800,
+            "Unnamed: 7": 120,
+            "Unnamed: 8": 680
+          },
+          {
+            "HONORAIRES INTERVENANTS & KEYNOTE SPEAKERS — Conférence ISSTE 2025": "Dr. Fatima Z. IDRISSI",
+            "Unnamed: 1": "Docteur",
+            "Unnamed: 2": "Univ. Mohammed VI",
+            "Unnamed: 3": "Maroc",
+            "Unnamed: 4": "Présentation scientifique",
+            "Unnamed: 5": 1,
+            "Unnamed: 6": 1200,
+            "Unnamed: 7": 180,
+            "Unnamed: 8": 1020
+          },
+          {
+            "HONORAIRES INTERVENANTS & KEYNOTE SPEAKERS — Conférence ISSTE 2025": "Dr. Aisha AL-RASHIDI",
+            "Unnamed: 1": "Docteur",
+            "Unnamed: 2": "Univ. King Saud",
+            "Unnamed: 3": "Arabie S.",
+            "Unnamed: 4": "Présentation scientifique",
+            "Unnamed: 5": 1,
+            "Unnamed: 6": 1500,
+            "Unnamed: 7": 225,
+            "Unnamed: 8": 1275
+          },
+          {
+            "HONORAIRES INTERVENANTS & KEYNOTE SPEAKERS — Conférence ISSTE 2025": "Dr. Liu ZHANG",
+            "Unnamed: 1": "Docteur",
+            "Unnamed: 2": "Tsinghua Univ.",
+            "Unnamed: 3": "Chine",
+            "Unnamed: 4": "Présentation scientifique",
+            "Unnamed: 5": 1,
+            "Unnamed: 6": 1500,
+            "Unnamed: 7": 225,
+            "Unnamed: 8": 1275
+          },
+          {
+            "HONORAIRES INTERVENANTS & KEYNOTE SPEAKERS — Conférence ISSTE 2025": "Prof. Monia GHARBI",
+            "Unnamed: 1": "Professeure",
+            "Unnamed: 2": "ENIG Gabès",
+            "Unnamed: 3": "Tunisie",
+            "Unnamed: 4": "Modératrice session",
+            "Unnamed: 5": 6,
+            "Unnamed: 6": 800,
+            "Unnamed: 7": 120,
+            "Unnamed: 8": 680
+          },
+          {
+            "HONORAIRES INTERVENANTS & KEYNOTE SPEAKERS — Conférence ISSTE 2025": "TOTAL HONORAIRES",
+            "Unnamed: 1": NaN,
+            "Unnamed: 2": NaN,
+            "Unnamed: 3": NaN,
+            "Unnamed: 4": NaN,
+            "Unnamed: 5": NaN,
+            "Unnamed: 6": 16000,
+            "Unnamed: 7": 2400,
+            "Unnamed: 8": 13600
+          }
+        ],
+        "columns": [
+          "HONORAIRES INTERVENANTS & KEYNOTE SPEAKERS — Conférence ISSTE 2025",
+          "Unnamed: 1",
+          "Unnamed: 2",
+          "Unnamed: 3",
+          "Unnamed: 4",
+          "Unnamed: 5",
+          "Unnamed: 6",
+          "Unnamed: 7",
+          "Unnamed: 8"
+        ],
+        "shape": [
+          12,
+          9
+        ]
+      },
+      "KPI & Tableau de Bord": {
+        "rows": [
+          {
+            "TABLEAU DE BORD KPI — Conférence Scientifique ISSTE 2025": "Indicateur KPI",
+            "Unnamed: 1": "Cible",
+            "Unnamed: 2": "Réalisé",
+            "Unnamed: 3": "Unité",
+            "Unnamed: 4": "Écart",
+            "Unnamed: 5": "Statut"
+          },
+          {
+            "TABLEAU DE BORD KPI — Conférence Scientifique ISSTE 2025": "Budget total alloué (TND)",
+            "Unnamed: 1": 85000,
+            "Unnamed: 2": 85000,
+            "Unnamed: 3": "TND",
+            "Unnamed: 4": 0,
+            "Unnamed: 5": "Atteint"
+          },
+          {
+            "TABLEAU DE BORD KPI — Conférence Scientifique ISSTE 2025": "Budget total consommé (TND)",
+            "Unnamed: 1": 80000,
+            "Unnamed: 2": 79630,
+            "Unnamed: 3": "TND",
+            "Unnamed: 4": -370,
+            "Unnamed: 5": "Atteint"
+          },
+          {
+            "TABLEAU DE BORD KPI — Conférence Scientifique ISSTE 2025": "Taux exécution budgétaire",
+            "Unnamed: 1": 94.1,
+            "Unnamed: 2": 93.7,
+            "Unnamed: 3": "%",
+            "Unnamed: 4": -0.399999999999992,
+            "Unnamed: 5": "Atteint"
+          },
+          {
+            "TABLEAU DE BORD KPI — Conférence Scientifique ISSTE 2025": "Participants prévus",
+            "Unnamed: 1": 280,
+            "Unnamed: 2": 263,
+            "Unnamed: 3": "pers.",
+            "Unnamed: 4": -17,
+            "Unnamed: 5": "Atteint"
+          },
+          {
+            "TABLEAU DE BORD KPI — Conférence Scientifique ISSTE 2025": "Taux de participation",
+            "Unnamed: 1": 100,
+            "Unnamed: 2": 93.9,
+            "Unnamed: 3": "%",
+            "Unnamed: 4": -6.09999999999999,
+            "Unnamed: 5": "Atteint"
+          },
+          {
+            "TABLEAU DE BORD KPI — Conférence Scientifique ISSTE 2025": "Intervenants confirmés",
+            "Unnamed: 1": 10,
+            "Unnamed: 2": 10,
+            "Unnamed: 3": "pers.",
+            "Unnamed: 4": 0,
+            "Unnamed: 5": "Atteint"
+          },
+          {
+            "TABLEAU DE BORD KPI — Conférence Scientifique ISSTE 2025": "Intervenants internationaux",
+            "Unnamed: 1": 7,
+            "Unnamed: 2": 7,
+            "Unnamed: 3": "pers.",
+            "Unnamed: 4": 0,
+            "Unnamed: 5": "Atteint"
+          },
+          {
+            "TABLEAU DE BORD KPI — Conférence Scientifique ISSTE 2025": "Communications scientifiques",
+            "Unnamed: 1": 45,
+            "Unnamed: 2": 42,
+            "Unnamed: 3": "comm.",
+            "Unnamed: 4": -3,
+            "Unnamed: 5": "Atteint"
+          },
+          {
+            "TABLEAU DE BORD KPI — Conférence Scientifique ISSTE 2025": "Ateliers thématiques",
+            "Unnamed: 1": 4,
+            "Unnamed: 2": 4,
+            "Unnamed: 3": "ateliers",
+            "Unnamed: 4": 0,
+            "Unnamed: 5": "Atteint"
+          },
+          {
+            "TABLEAU DE BORD KPI — Conférence Scientifique ISSTE 2025": "Coût moyen par participant",
+            "Unnamed: 1": 286,
+            "Unnamed: 2": 302.8,
+            "Unnamed: 3": "TND/pers.",
+            "Unnamed: 4": 16.8,
+            "Unnamed: 5": "Atteint"
+          },
+          {
+            "TABLEAU DE BORD KPI — Conférence Scientifique ISSTE 2025": "Coût restauration / participant",
+            "Unnamed: 1": 66,
+            "Unnamed: 2": 67.7,
+            "Unnamed: 3": "TND/pers.",
+            "Unnamed: 4": 1.7,
+            "Unnamed: 5": "Atteint"
+          },
+          {
+            "TABLEAU DE BORD KPI — Conférence Scientifique ISSTE 2025": "Satisfaction globale (enquête)",
+            "Unnamed: 1": 85,
+            "Unnamed: 2": 88,
+            "Unnamed: 3": "%",
+            "Unnamed: 4": 3,
+            "Unnamed: 5": "Atteint"
+          },
+          {
+            "TABLEAU DE BORD KPI — Conférence Scientifique ISSTE 2025": "Taux paiement fournisseurs",
+            "Unnamed: 1": 100,
+            "Unnamed: 2": 91.7,
+            "Unnamed: 3": "%",
+            "Unnamed: 4": -8.3,
+            "Unnamed: 5": "Atteint"
+          },
+          {
+            "TABLEAU DE BORD KPI — Conférence Scientifique ISSTE 2025": "Publications issues conférence",
+            "Unnamed: 1": 12,
+            "Unnamed: 2": 10,
+            "Unnamed: 3": "articles",
+            "Unnamed: 4": -2,
+            "Unnamed: 5": "A surveiller"
+          }
+        ],
+        "columns": [
+          "TABLEAU DE BORD KPI — Conférence Scientifique ISSTE 2025",
+          "Unnamed: 1",
+          "Unnamed: 2",
+          "Unnamed: 3",
+          "Unnamed: 4",
+          "Unnamed: 5"
+        ],
+        "shape": [
+          15,
+          6
+        ]
+      }
+    }
+  }
+}

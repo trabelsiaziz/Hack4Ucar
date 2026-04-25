@@ -1,0 +1,38 @@
+{
+  "document_id": "4570db47",
+  "document_type": "bulletin",
+  "institution_id": "enstab",
+  "period_id": "2025-S1",
+  "source_file": "bulletin_test.jpg",
+  "extracted_at": "2026-04-25T19:16:59.205402+00:00",
+  "data": {
+    "student": {
+      "nom": "Ahmed",
+      "prenom": "Ali",
+      "numero_etudiant": "ETU2024001",
+      "cin": "12345678"
+    },
+    "notes": [
+      {
+        "matiere": "Algorithmique",
+        "note": 16,
+        "coefficient": 2
+      },
+      {
+        "matiere": "Programmation",
+        "note": 14,
+        "coefficient": 2
+      },
+      {
+        "matiere": "Base de données",
+        "note": 15,
+        "coefficient": 3
+      }
+    ],
+    "bilan": {
+      "moyenne_generale": 15.0,
+      "resultat": "Admis",
+      "mention": "Très Bien"
+    }
+  }
+}

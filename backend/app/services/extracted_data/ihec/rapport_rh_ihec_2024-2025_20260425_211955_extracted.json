@@ -1,0 +1,252 @@
+{
+  "metadata": {
+    "pdf_file": "rapport_rh_ihec_2024-2025.pdf",
+    "extraction_date": "2026-04-25T21:19:33.797769",
+    "total_pages": 2,
+    "extraction_method": "GPT-4 Vision API"
+  },
+  "pages": [
+    {
+      "page_number": 1,
+      "title": "Rapport Ressources Humaines — IHEC Carthage",
+      "sections": [
+        {
+          "type": "text",
+          "title": "Résumé RH",
+          "content": "L'IHEC Carthage emploie au total 150 agents dont 112 enseignants permanents (74.7%) et 38 personnels administratifs. Le taux d'absentéisme global est de 5.8%, bien en dessous du seuil d'alerte de 8%, témoignant d'un climat social satisfaisant. 52 formations ont été complétées cette année, soit une moyenne de 1.1 formation par agent."
+        },
+        {
+          "type": "table",
+          "title": "1. KPIs Ressources Humaines",
+          "content": [
+            {
+              "KPI RH": "headcount_teaching",
+              "Valeur": 112,
+              "Unité": "pers.",
+              "N-1": 108,
+              "Variation": "+3.7%",
+              "Seuil Warning": "—"
+            },
+            {
+              "KPI RH": "headcount_admin",
+              "Valeur": 38,
+              "Unité": "pers.",
+              "N-1": 40,
+              "Variation": "-5.0%",
+              "Seuil Warning": "—"
+            },
+            {
+              "KPI RH": "absenteeism_rate",
+              "Valeur": 5.8,
+              "Unité": "%",
+              "N-1": "6.2%",
+              "Variation": "-0.4pt",
+              "Seuil Warning": "8%"
+            },
+            {
+              "KPI RH": "training_completed",
+              "Valeur": 52,
+              "Unité": "sessions",
+              "N-1": 44,
+              "Variation": "+18.2%",
+              "Seuil Warning": "—"
+            },
+            {
+              "KPI RH": "teaching_load",
+              "Valeur": 18.4,
+              "Unité": "h/sem",
+              "N-1": 17.8,
+              "Variation": "+3.4%",
+              "Seuil Warning": "—"
+            },
+            {
+              "KPI RH": "team_stability",
+              "Valeur": 94.2,
+              "Unité": "%",
+              "N-1": "91.8%",
+              "Variation": "+2.4pt",
+              "Seuil Warning": "85%"
+            },
+            {
+              "KPI RH": "vacancy_rate",
+              "Valeur": 2.3,
+              "Unité": "%",
+              "N-1": "4.1%",
+              "Variation": "-1.8pt",
+              "Seuil Warning": "10%"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "title": "2. Répartition du Personnel par Département",
+          "content": "Le département de Commerce International concentre le plus grand effectif enseignant avec 28 enseignants, suivi de Marketing (22) et Audit & Contrôle (18). Le taux d'absentéisme le plus préoccupant concerne le département de Finance avec 8.9%, juste au-dessus du seuil d'alerte."
+        },
+        {
+          "type": "table",
+          "title": "Répartition du Personnel par Département",
+          "content": [
+            {
+              "Département": "Commerce Int.",
+              "Enseignants": 28,
+              "Administratifs": 8,
+              "Absentéisme %": 4.2,
+              "Formations": 14,
+              "Charge h/sem": 19.2
+            },
+            {
+              "Département": "Marketing",
+              "Enseignants": 22,
+              "Administratifs": 7,
+              "Absentéisme %": 5.1,
+              "Formations": 11,
+              "Charge h/sem": 17.8
+            },
+            {
+              "Département": "Audit & Contrôle",
+              "Enseignants": 18,
+              "Administratifs": 6,
+              "Absentéisme %": 6.3,
+              "Formations": 9,
+              "Charge h/sem": 18.9
+            },
+            {
+              "Département": "Finance",
+              "Enseignants": 24,
+              "Administratifs": 9,
+              "Absentéisme %": 8.9,
+              "Formations": 12,
+              "Charge h/sem": 18.1
+            },
+            {
+              "Département": "Informatique Gestion",
+              "Enseignants": 20,
+              "Administratifs": 8,
+              "Absentéisme %": 5.5,
+              "Formations": 6,
+              "Charge h/sem": 17.2
+            }
+          ]
+        }
+      ],
+      "extracted_metrics": [
+        {
+          "department": "global",
+          "metric_name": "total_agents",
+          "value": 150
+        },
+        {
+          "department": "global",
+          "metric_name": "absenteeism_rate",
+          "value": 5.8
+        },
+        {
+          "department": "global",
+          "metric_name": "training_completed",
+          "value": 52
+        },
+        {
+          "department": "Finance",
+          "metric_name": "absenteeism_rate",
+          "value": 8.9
+        }
+      ]
+    },
+    {
+      "page_number": 1,
+      "error": "'list' object has no attribute 'get'"
+    },
+    {
+      "page_number": 2,
+      "title": "Taux d'absentéisme par département — IHEC 2024-2025",
+      "sections": [
+        {
+          "type": "chart",
+          "title": "Taux d'absentéisme par département",
+          "content": {
+            "description": "Graphique montrant le taux d'absentéisme par département pour l'année 2024-2025.",
+            "data": {
+              "Commerce Int.": 4.2,
+              "Marketing": 5.1,
+              "Audit & Contrôle": 6.3,
+              "Finance": 8.9,
+              "Informatique Gestion": 5.5
+            }
+          }
+        },
+        {
+          "type": "text",
+          "title": "Métadonnées système",
+          "content": "institution_id: ihec\ndomain: hr\nperiod_id: 2024-2025\ntenant_id: ucar\nschema_version: 1.0\nheadcount_teaching: 112 count\nheadcount_admin: 38 count\nabsenteeism_rate: 5.8 percent\ntraining_completed: 52 count\nteaching_load: 18.4 h/week\nteam_stability: 94.2 percent"
+        }
+      ],
+      "extracted_metrics": [
+        {
+          "department": "Commerce Int.",
+          "metric_name": "absenteeism_rate",
+          "value": 4.2
+        },
+        {
+          "department": "Marketing",
+          "metric_name": "absenteeism_rate",
+          "value": 5.1
+        },
+        {
+          "department": "Audit & Contrôle",
+          "metric_name": "absenteeism_rate",
+          "value": 6.3
+        },
+        {
+          "department": "Finance",
+          "metric_name": "absenteeism_rate",
+          "value": 8.9
+        },
+        {
+          "department": "Informatique Gestion",
+          "metric_name": "absenteeism_rate",
+          "value": 5.5
+        },
+        {
+          "department": "global",
+          "metric_name": "absenteeism_rate",
+          "value": 5.8
+        },
+        {
+          "department": "global",
+          "metric_name": "headcount_teaching",
+          "value": 112
+        },
+        {
+          "department": "global",
+          "metric_name": "headcount_admin",
+          "value": 38
+        },
+        {
+          "department": "global",
+          "metric_name": "training_completed",
+          "value": 52
+        },
+        {
+          "department": "global",
+          "metric_name": "teaching_load",
+          "value": 18.4
+        },
+        {
+          "department": "global",
+          "metric_name": "team_stability",
+          "value": 94.2
+        }
+      ]
+    },
+    {
+      "page_number": 2,
+      "error": "'list' object has no attribute 'get'"
+    }
+  ],
+  "structured_data": {
+    "hr_metrics": {},
+    "departments": {},
+    "statistics": [],
+    "tables": []
+  }
+}

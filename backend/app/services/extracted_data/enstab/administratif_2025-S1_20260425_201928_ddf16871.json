@@ -1,0 +1,31 @@
+{
+  "document_id": "ddf16871",
+  "document_type": "administratif",
+  "institution_id": "enstab",
+  "period_id": "2025-S1",
+  "source_file": "donnees_admin_2025_s1.xlsx",
+  "extracted_at": "2026-04-25T19:19:28.875199+00:00",
+  "data": {
+    "type": "Données Administratives",
+    "periode": "2025-S1",
+    "personnel": {
+      "enseignants_cdi": 45,
+      "enseignants_vacataires": 12,
+      "personnel_administratif": 28,
+      "personnel_technique": 15
+    },
+    "infrastructure": {
+      "amphitheaters": 8,
+      "salles_cours": 32,
+      "labs_informatique": 4,
+      "bibliotheques": 2,
+      "restaurants_universitaires": 1
+    },
+    "budget": {
+      "budget_total": "5,000,000 DT",
+      "allocation_enseignement": "60%",
+      "allocation_recherche": "25%",
+      "allocation_infrastructure": "15%"
+    }
+  }
+}
