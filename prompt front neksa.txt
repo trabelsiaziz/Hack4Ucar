@@ -1,0 +1,431 @@
+Build a professional, modern, responsive web frontend for university of carthage (ucar) management and analytics platform.
+
+ 
+
+Context:
+
+- The frontend must be backend-driven.
+
+- There are 4 user roles with different access levels and visible features:
+
+  1) STUDENT
+
+  2) TEACHER
+
+  3) INSTITUTION_ADMIN
+
+  4) RESEARCHER
+
+- Do NOT hardcode role-specific sidebars or dashboards.
+
+- The backend is the source of truth and provides:
+
+  - current user context
+
+  - permissions
+
+  - feature flags
+
+  - visible navigation items
+
+  - dynamic page schemas
+
+  - widget configurations
+
+- The frontend must render the UI dynamically from backend data.
+
+ 
+
+Main goal:
+
+Create a reusable app shell and a set of generic components so the same frontend can serve all user types based on backend responses.
+
+ 
+
+Design requirements:
+
+- Clean enterprise dashboard style
+
+- Professional academic/admin product look
+
+- Responsive layout
+
+- Left sidebar + topbar + main content area
+
+- Sidebar supports collapsed and mobile states
+
+- Clear empty, loading, and access denied states
+
+- Keep the architecture simple and modular
+
+ 
+
+Required frontend architecture:
+
+1. App shell
+
+   - AppShell
+
+   - Sidebar
+
+   - Topbar
+
+ 
+
+2. Dynamic rendering layer
+
+   - PageRenderer
+
+   - WidgetRenderer
+
+ 
+
+3. Generic widgets
+
+   - StatCardWidget
+
+   - TableWidget
+
+   - ChartWidget
+
+   - AlertListWidget
+
+   - RecommendationListWidget
+
+   - ProfileSummaryWidget
+
+ 
+
+4. Access layer
+
+   - AccessGuard component
+
+   - permissions utility
+
+ 
+
+5. Data layer
+
+   - mock API client
+
+   - hooks for user context, navigation, page schema, widget data
+
+ 
+
+Use:
+
+- Next.js App Router
+
+- TypeScript
+
+- Tailwind CSS
+
+- shadcn/ui
+
+- Recharts for charts
+
+ 
+
+Important behavior:
+
+- Sidebar items are rendered from backend navigation data only.
+
+- If a nav item has visible=false, it must not be shown.
+
+- Pages are rendered from page schema objects returned by the backend.
+
+- Widgets are rendered by widget type using a widget registry pattern.
+
+- Frontend may hide unauthorized UI, but do not pretend it is real security; backend remains the source of truth.
+
+- Keep business logic minimal in the frontend.
+
+ 
+
+Use these backend-driven object shapes:
+
+ 
+
+1) UserContext
+
+{
+
+  userId: string,
+
+  fullName: string,
+
+  roleCode: "STUDENT" | "TEACHER" | "INSTITUTION_ADMIN" | "PLATFORM_ADMIN",
+
+  tenantId: string,
+
+  institutionId: string,
+
+  orgUnitId?: string,
+
+  permissions: string[],
+
+  featureFlags: string[]
+
+}
+
+ 
+
+2) NavItem
+
+{
+
+  id: string,
+
+  label: string,
+
+  icon: string,
+
+  route: string,
+
+  order: number,
+
+  visible: boolean,
+
+  children: NavItem[]
+
+}
+
+ 
+
+3) PageSchema
+
+{
+
+  pageId: string,
+
+  title: string,
+
+  layout: "grid" | "stack",
+
+  widgets: WidgetSchema[]
+
+}
+
+ 
+
+4) WidgetSchema
+
+{
+
+  widgetId: string,
+
+  widgetType: "stat-card" | "table" | "chart" | "alert-list" | "recommendation-list" | "profile-summary",
+
+  title: string,
+
+  endpoint: string,
+
+  visible: boolean,
+
+  order: number,
+
+  props: Record<string, any>
+
+}
+
+ 
+
+5) ActionSchema
+
+{
+
+  actionId: string,
+
+  label: string,
+
+  actionType: string,
+
+  endpoint: string,
+
+  method: "GET" | "POST",
+
+  visible: boolean
+
+}
+
+ 
+
+Create mock backend data files for:
+
+- one STUDENT user
+
+- one INSTITUTION_ADMIN user
+
+- one PLATFORM_ADMIN user
+
+ 
+
+Create mock navigation examples showing that:
+
+- students only see their own dashboard/profile/academic data
+
+- admins see extra modules such as institutions, users, analytics, alerts, KPI pages
+
+ 
+
+Required pages:
+
+- /dashboard
+
+- /profile
+
+- /[pageId] dynamic page renderer
+
+ 
+
+Required states:
+
+- loading state
+
+- empty state
+
+- access denied state
+
+- widget fetch error state
+
+ 
+
+Recommended file structure:
+
+- app/
+
+- components/shell/
+
+- components/dynamic/
+
+- components/widgets/
+
+- components/guards/
+
+- lib/api/
+
+- lib/auth/
+
+- lib/access/
+
+- types/
+
+- mocks/
+
+- hooks/
+
+ 
+
+Also include:
+
+- a widget registry
+
+- a simple mock API layer
+
+- reusable sidebar rendering from navigation JSON
+
+- page rendering from page schema JSON
+
+- clean TypeScript types for all backend-driven objects
+
+ 
+
+Do not generate a toy UI.
+
+Generate a realistic dashboard UI that looks like an enterprise internal platform for university operations, KPI monitoring, alerts, and AI-driven recommendations.
+
+files:
+
+src/
+
+├─ app/
+
+│  ├─ layout.tsx
+
+│  ├─ page.tsx
+
+│  ├─ dashboard/page.tsx
+
+│  ├─ profile/page.tsx
+
+│  └─ [pageId]/page.tsx
+
+├─ components/
+
+│  ├─ shell/
+
+│  │  ├─ AppShell.tsx
+
+│  │  ├─ Sidebar.tsx
+
+│  │  └─ Topbar.tsx
+
+│  ├─ dynamic/
+
+│  │  ├─ PageRenderer.tsx
+
+│  │  └─ WidgetRenderer.tsx
+
+│  ├─ widgets/
+
+│  │  ├─ StatCardWidget.tsx
+
+│  │  ├─ TableWidget.tsx
+
+│  │  ├─ ChartWidget.tsx
+
+│  │  ├─ AlertListWidget.tsx
+
+│  │  └─ RecommendationListWidget.tsx
+
+│  └─ guards/
+
+│     └─ AccessGuard.tsx
+
+├─ lib/
+
+│  ├─ api/
+
+│  │  └─ client.ts
+
+│  ├─ auth/
+
+│  │  └─ session.ts
+
+│  ├─ access/
+
+│  │  └─ permissions.ts
+
+│  └─ utils/
+
+├─ types/
+
+│  ├─ user.ts
+
+│  ├─ navigation.ts
+
+│  ├─ page-schema.ts
+
+│  └─ widget.ts
+
+├─ mocks/
+
+│  ├─ me.json
+
+│  ├─ navigation.student.json
+
+│  ├─ navigation.admin.json
+
+│  └─ pages/
+
+└─ hooks/
+
+   ├─ useUserContext.ts
+
+   ├─ useNavigation.ts
+
+   └─ usePageSchema.ts
+
+couloue palette:
+Deep Navy Blue#0030870, 48, 135Header, navigation, logoSky Blue Accent#4A9BC874, 155, 200Banner overlay, accentsWhite#FFFFFF255, 255, 255Background, textLight Cyan (logo)#00A8E80, 168, 232Logo detailsSea Turquoise#4ECDC478, 205, 196Photographic element
+
