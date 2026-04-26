@@ -19,9 +19,12 @@ const trendConfig: Record<
 };
 
 export function KpiStatCard({ card }: KpiStatCardProps) {
-  const cfg = trendConfig[card.trend];
+  const trend = card.trend ?? "stable";
+  const cfg = trendConfig[trend] ?? trendConfig.stable;
   const Icon = cfg.icon;
-  const showPlus = card.trend === "up" && card.delta > 0;
+  const value = card.value ?? null;
+  const delta = card.delta ?? null;
+  const showPlus = trend === "up" && (delta ?? 0) > 0;
 
   return (
     <Card className="relative overflow-hidden transition-shadow hover:shadow-md">
@@ -40,7 +43,7 @@ export function KpiStatCard({ card }: KpiStatCardProps) {
         </p>
         <div className="mt-2 flex items-end gap-2">
           <span className="text-3xl font-bold tabular-nums">
-            {card.value.toFixed(1)}
+            {value !== null ? value.toFixed(1) : "—"}
             <span className="text-lg font-normal text-muted-foreground ml-0.5">
               {card.unit}
             </span>
@@ -50,7 +53,7 @@ export function KpiStatCard({ card }: KpiStatCardProps) {
           <span className={cn("flex items-center gap-1 rounded-full px-2 py-0.5 text-xs font-semibold", cfg.bg, cfg.color)}>
             <Icon className="h-3 w-3" />
             {showPlus && "+"}
-            {card.delta.toFixed(1)}{card.unit}
+            {delta !== null ? delta.toFixed(1) : "—"}{card.unit}
           </span>
           <span className="text-xs text-muted-foreground">vs prev. period</span>
         </div>

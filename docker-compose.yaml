@@ -1,0 +1,113 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# Ucar Platform — Docker Compose  (dev / low-RAM profile)
+#
+# Services:
+#   postgres  → postgres:16-alpine  (port 5432)   ~50 MB
+#   ollama    → nginx:alpine  MOCK  (port 11434)   ~10 MB
+#   backend   → nginx:alpine  MOCK  (port 8080)    ~10 MB
+#   frontend  → node:20-alpine      (port 3000)    ~128 MB
+#
+# To restore real services:
+#   • backend : change image to build: ./BACKEND/BACK
+#   • ollama  : change image to ollama/ollama:latest
+#
+# Usage:
+#   docker compose up -d
+#   docker compose down -v
+# ─────────────────────────────────────────────────────────────────────────────
+
+services:
+
+  # ── Database — postgres:16-alpine ─────────────────────────────────────────
+  postgres:
+    image: postgres:16-alpine
+    container_name: ucar_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ucar_db
+      POSTGRES_USER: ucar_user
+      POSTGRES_PASSWORD: ucar_pass
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ucar_user -d ucar_db"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # ── Ollama MOCK — nginx:alpine ~10 MB ────────────────────────────────────
+  # Fakes /api/version, /api/generate, /api/chat, /api/embeddings.
+  # Swap this block for the real Ollama service when you have RAM to spare.
+  ollama:
+    image: nginx:alpine
+    container_name: ucar_ollama
+    restart: unless-stopped
+    ports:
+      - "11434:11434"
+    volumes:
+      - ./mock/ollama/default.conf:/etc/nginx/conf.d/default.conf:ro
+    deploy:
+      resources:
+        limits:
+          memory: 32M
+    healthcheck:
+      test: ["CMD-SHELL", "wget -qO- http://localhost:11434/api/version || exit 1"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+      start_period: 5s
+
+  # ── Backend MOCK — nginx:alpine ~10 MB ───────────────────────────────────
+  # Fakes all /api/dashboard/* endpoints and /actuator/health.
+  # Swap for the real Spring Boot build when ready.
+  backend:
+    image: nginx:alpine
+    container_name: ucar_backend
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+      ollama:
+        condition: service_healthy
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./mock/backend/default.conf:/etc/nginx/conf.d/default.conf:ro
+    deploy:
+      resources:
+        limits:
+          memory: 32M
+    healthcheck:
+      test: ["CMD-SHELL", "wget -qO- http://localhost:8080/actuator/health || exit 1"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+      start_period: 5s
+
+  # ── Next.js Frontend — node:20-alpine ────────────────────────────────────
+  frontend:
+    build:
+      context: ./FRONTEND
+      dockerfile: Dockerfile
+      args:
+        NEXT_PUBLIC_API_URL: http://localhost:8080
+    container_name: ucar_frontend
+    restart: unless-stopped
+    depends_on:
+      backend:
+        condition: service_healthy
+    environment:
+      NODE_ENV: production
+      NODE_OPTIONS: "--max-old-space-size=128"
+    ports:
+      - "3000:3000"
+    deploy:
+      resources:
+        limits:
+          memory: 192M
+
+volumes:
+  postgres_data:
+    driver: local

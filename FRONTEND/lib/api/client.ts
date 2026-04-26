@@ -1,3 +1,9 @@
+// ─────────────────────────────────────────────────────────────────────────────
+// Main API Client
+// Calls http://localhost:8080 for all app data (users, nav, pages, widgets).
+// Falls back to mock data when the backend is unreachable.
+// ─────────────────────────────────────────────────────────────────────────────
+
 import {
   mockUsers,
   currentUserKey,
@@ -21,70 +27,71 @@ import type {
   ProfileSummaryData,
 } from "@/types";
 
-// Simulate API delay
-const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
+const BASE = "http://localhost:8080";
+
+// ── helpers ───────────────────────────────────────────────────────────────────
+
+async function get<T>(path: string, fallback: T): Promise<T> {
+  try {
+    const res = await fetch(`${BASE}${path}`, {
+      headers: { Accept: "application/json" },
+      signal: AbortSignal.timeout(5000),
+    });
+    if (!res.ok) {
+      console.warn(`[api-client] ${path} → HTTP ${res.status}, using mock`);
+      return fallback;
+    }
+    return (await res.json()) as T;
+  } catch {
+    console.warn(`[api-client] ${path} unreachable, using mock data`);
+    return fallback;
+  }
+}
+
+// ── Public API ────────────────────────────────────────────────────────────────
 
 export const apiClient = {
-  // Get current user context
+  // Get current user context from /api/users/me
   async getCurrentUser(): Promise<UserContext> {
-    await delay(100);
-    return mockUsers[currentUserKey];
+    return get<UserContext>("/api/users/me", mockUsers[currentUserKey]);
   },
 
-  // Get navigation items for current user
+  // Get navigation items for current user's role
   async getNavigation(roleCode: UserContext["roleCode"]): Promise<NavItem[]> {
-    await delay(50);
-    return navigationByRole[roleCode] || [];
+    return get<NavItem[]>(
+      `/api/navigation?role=${roleCode}`,
+      navigationByRole[roleCode] || []
+    );
   },
 
-  // Get page schema
+  // Get page schema from /api/pages/{pageId}?role={roleCode}
   async getPageSchema(
     roleCode: UserContext["roleCode"],
     pageId: string
   ): Promise<PageSchema | null> {
-    await delay(100);
-    const pages = pagesByRole[roleCode];
-    return pages?.[pageId] || null;
+    const fallback = pagesByRole[roleCode]?.[pageId] || null;
+    return get<PageSchema | null>(
+      `/api/pages/${pageId}?role=${roleCode}`,
+      fallback
+    );
   },
 
-  // Get widget data by endpoint
+  // Get widget data by endpoint (e.g. /api/widgets/gpa)
   async getWidgetData<T>(endpoint: string): Promise<T | null> {
-    await delay(150);
+    // Build mock fallback by checking all mock maps
+    let fallback: T | null = null;
+    if (endpoint in statCardData) fallback = statCardData[endpoint] as T;
+    else if (endpoint in chartData) fallback = chartData[endpoint] as T;
+    else if (endpoint in tableData) fallback = tableData[endpoint] as T;
+    else if (endpoint in alertData) fallback = alertData[endpoint] as T;
+    else if (endpoint in recommendationData) fallback = recommendationData[endpoint] as T;
+    else if (endpoint in profileData) fallback = profileData[endpoint] as T;
 
-    // Check stat card data
-    if (endpoint in statCardData) {
-      return statCardData[endpoint] as T;
-    }
-
-    // Check chart data
-    if (endpoint in chartData) {
-      return chartData[endpoint] as T;
-    }
-
-    // Check table data
-    if (endpoint in tableData) {
-      return tableData[endpoint] as T;
-    }
-
-    // Check alert data
-    if (endpoint in alertData) {
-      return alertData[endpoint] as T;
-    }
-
-    // Check recommendation data
-    if (endpoint in recommendationData) {
-      return recommendationData[endpoint] as T;
-    }
-
-    // Check profile data
-    if (endpoint in profileData) {
-      return profileData[endpoint] as T;
-    }
-
-    return null;
+    return get<T | null>(endpoint, fallback);
   },
 
-  // Convenience methods for specific widget types
+  // ── Convenience typed methods ────────────────────────────────────────────────
+
   async getStatCardData(endpoint: string): Promise<StatCardData | null> {
     return this.getWidgetData<StatCardData>(endpoint);
   },

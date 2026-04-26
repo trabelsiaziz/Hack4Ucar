@@ -367,15 +367,26 @@ const MOCK_INSIGHTS: InsightsDashboardDto = {
 
 // ── Default demo params ───────────────────────────────────────────────────────
 
+// ── Real UUIDs seeded by BackApplication.dataInitializer() ────────────────────
+// Institution IDs
+const ENIT_ID = "11111111-0000-0000-0000-000000000001";
+const FSEG_ID = "11111111-0000-0000-0000-000000000002";
+const IHEC_ID = "11111111-0000-0000-0000-000000000003";
+
+// Period IDs
+const P_2024_S1 = "22222222-0000-0000-0000-000000000001";
+const P_2024_S2 = "22222222-0000-0000-0000-000000000002";
+const P_2025_S1 = "22222222-0000-0000-0000-000000000003";
+
 export const DEMO_PARAMS = {
-  institutionId: "550e8400-e29b-41d4-a716-446655440000",
+  institutionId: ENIT_ID,
   institutionCode: "ENIT",
-  institutionIds: "550e8400-e29b-41d4-a716-446655440000,aaa-111,bbb-222,ccc-333",
-  institutionCodes: "ENIT,FSEG,IHEC,ISET",
-  periodId: "660e8400-e29b-41d4-a716-446655440001",
+  institutionIds: `${ENIT_ID},${FSEG_ID},${IHEC_ID}`,
+  institutionCodes: "ENIT,FSEG,IHEC",
+  periodId: P_2025_S1,
   periodLabel: "2025-S1",
-  periodIds: "aaa-p1,bbb-p2,ccc-p3,ddd-p4,eee-p5",
-  periodLabels: "2023-S1,2023-S2,2024-S1,2024-S2,2025-S1",
+  periodIds: `${P_2024_S1},${P_2024_S2},${P_2025_S1}`,
+  periodLabels: "2024-S1,2024-S2,2025-S1",
 } as const;
 
 // ── Public API ────────────────────────────────────────────────────────────────
