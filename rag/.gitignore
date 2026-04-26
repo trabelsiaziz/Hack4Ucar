@@ -1,0 +1,14 @@
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+*.so
+*.db
+*.sqlite
+.env
+.env*.local
+*.log
+.DS_Store
+app/services/extracted_data/
+app/services/uploads/
+app/services/generated_pdfs/

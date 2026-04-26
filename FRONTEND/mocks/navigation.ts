@@ -231,7 +231,7 @@ const adminNavigation: NavItem[] = [
     id: "kpis",
     label: "KPI Dashboard",
     icon: "Target",
-    route: "/kpis",
+    route: "/kpi-dashboard",
     order: 7,
     visible: true,
     children: [],
